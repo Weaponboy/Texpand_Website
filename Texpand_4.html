@@ -120,7 +120,7 @@
 
 			.Toggle {
 				position: absolute;
-				top: 4vh;
+				top: 2.8vh;
 				right: 1rem;
 			}
 
@@ -157,8 +157,8 @@
 
 			.HomeTexpandlogo {
 				display: block;
-				width: 10%;
-				height: 10%;
+				width: 40%;
+				height: auto;
 			}
 
 			#h {
@@ -177,7 +177,7 @@
 			margin-top: 2.5rem !important;
 			margin: auto !important;
 			display: block !important;
-			width: 8rem !important;
+			width: 27%;
 		}
 
 		h2 {
@@ -257,7 +257,6 @@
 
 		#heading {
 			text-align: center;
-			padding-top: 5%;
 			padding-left: 10rem;
 			padding-right: 10rem;
 			padding-bottom: 2rem;
@@ -308,7 +307,7 @@
 
 		#headingbuff {
 			text-align: center;
-			padding-top: 6rem;
+			padding-top: 4rem;
 			padding-left: 0rem;
 			padding-right: 0rem;
 			padding-bottom: 2rem;
@@ -436,7 +435,7 @@
 		}
 
 		#homejumbo {
-			background-image: url(images/New_Team_Pic_2.jpg);
+			background-image: url(images/Team\ pic.jpg);
 			background-position-x: center;
 			background-position-y: center;
 			background-size: cover;
@@ -448,13 +447,33 @@
 			color: rgb(0, 0, 0);
 		}
 
+		@media (max-width: 600px) {
+			#homejumbo {
+				background-image: url(images/Team\ pic.jpg);
+				background-position-x: center;
+				background-position-y: center;
+				background-size: cover;
+				font-family: "Helvetica ", sans-serif;
+				text-align: center;
+				padding-top: 3rem;
+				padding-bottom: 0rem;
+				margin: 0;
+				color: rgb(0, 0, 0);
+			}
+		}
+
 		#Home {
 			width: 100%;
 		}
 
-		@media (min-width: 1300px) {
+		@media (min-width: 1400px) {
 
 			#homejumbo {
+				margin-left: 15%;
+				margin-right: 15%;
+			}
+
+			#sponjumbo {
 				margin-left: 15%;
 				margin-right: 15%;
 			}
@@ -476,6 +495,11 @@
 		@media (min-width: 1500px) {
 
 			#homejumbo {
+				margin-left: 20%;
+				margin-right: 20%;
+			}
+
+			#sponjumbo {
 				margin-left: 20%;
 				margin-right: 20%;
 			}
@@ -503,8 +527,12 @@
 		}
 
 		#sponjumbo {
+			font-family: "Helvetica ", sans-serif;
+			text-align: center;
 			padding-top: -2rem;
 			padding-bottom: 4rem;
+			margin: 0;
+			color: rgb(0, 0, 0);
 		}
 
 		#outjumbo {
@@ -627,6 +655,19 @@
 		}
 
 		@media (max-width: 1100px) {
+
+			#home_miss {
+				padding-bottom: 2%;
+				border-radius: 6% / 5% !important;
+			}
+
+			.home2 {
+				background-color: #333;
+				border-style: solid;
+				border-radius: 7% / 2% !important;
+				border-color: rgb(90, 88, 88);
+			}
+
 			.imgs {
 				height: 78%;
 			}
@@ -689,7 +730,7 @@
 
 		#home_miss {
 			padding-bottom: 2%;
-			border-radius: 3%;
+			border-radius: 5% / 7%;
 		}
 
 		.card_imgs {
@@ -699,7 +740,7 @@
 		.home2 {
 			background-color: #333;
 			border-style: solid;
-			border-radius: 4%;
+			border-radius: 5% / 7%;
 			border-color: rgb(90, 88, 88);
 		}
 
@@ -709,7 +750,7 @@
 		}
 
 		.Us_imgs {
-			width: 45%;
+			width: 48%;
 		}
 
 		.us_clou {
@@ -899,6 +940,14 @@
 			}
 		}
 
+		@media (max-width: 900px) {
+
+			#videobuff {
+				width: 100%;
+				height: 70%;
+			}
+		}
+
 		.RowVid2 {
 			text-align: center;
 			padding-bottom: 0rem;
@@ -1022,18 +1071,18 @@
 
 		#videobuff {
 			text-align: center;
-			padding-top: 2rem;
+			padding-top: 0rem;
 		}
 
 		#buffvid {
-			height: 20rem;
+			height: 25rem;
 			padding-bottom: 2rem;
 		}
 
 		@media (max-width: 900px) {
 
 			#buffvid {
-				height: 40rem;
+				height: 50rem;
 				padding-bottom: 2rem;
 			}
 
@@ -1111,7 +1160,7 @@
 		}
 
 		#morepadding {
-			padding-top: 2rem;
+			padding-top: 0rem;
 		}
 
 		.ContactUs {
@@ -1161,7 +1210,6 @@
 
 		#sponsorSlide {
 			width: 100%;
-			height: auto;
 		}
 
 		#FSILogo {
@@ -1171,6 +1219,505 @@
 
 		#supportingSponsor {
 			font-size: 30rem;
+		}
+
+		@media(max-width: 900px) {
+
+			#firstAngle {
+				padding-top: 2rem;
+				padding-right: 1rem;
+				margin: 0;
+				opacity: 1;
+				width: 100%;
+				height: 80%;
+				margin-bottom: 3rem;
+				transform: translateY(0);
+				transition: opacity 2s ease-in-out;
+				background-color: #333;
+				z-index: -1;
+			}
+
+			#firstAngle::before {
+				content: '';
+				position: absolute;
+				top: 0;
+				left: 0;
+				width: 100%;
+				height: 106%;
+				background-color: #333;
+				transform-origin: 0% 100%;
+				transform: skewY(-2deg);
+				transform-origin: 100% 0%;
+				z-index: -1;
+
+			}
+
+			#expandImage {
+				width: 100%;
+				float: right;
+				padding-right: 10%;
+			}
+
+
+			#expandHeading {
+				font-size: 130%;
+				font-family: Arial, Helvetica, sans-serif;
+				justify-content: left;
+			}
+
+			#expandText {
+				font-size: 90%;
+				font-family: Arial, Helvetica, sans-serif;
+				justify-content: left;
+			}
+
+
+		}
+
+		@media(min-width: 900px) {
+
+			#firstAngle {
+				padding-top: 2rem;
+				opacity: 1;
+				width: 100%;
+				height: 39%;
+				margin-bottom: 3rem;
+				transform: translateY(0);
+				transition: opacity 2s ease-in-out;
+				background-color: #333;
+			}
+
+
+			#firstAngle::before {
+				content: '';
+				position: absolute;
+				top: 0;
+				left: 0;
+				width: 100%;
+				height: 115%;
+				background-color: #333;
+				transform-origin: 0% 100%;
+				transform: skewY(-2deg);
+				transform-origin: 100% 0%;
+				z-index: -1;
+			}
+
+
+			#expandImage {
+				width: 70%;
+				float: right;
+				padding-right: 10%;
+			}
+
+			#expandHeading {
+				font-size: 160%;
+				font-family: Arial, Helvetica, sans-serif;
+				justify-content: left;
+			}
+
+			#expandText {
+				font-size: 100%;
+				font-family: Arial, Helvetica, sans-serif;
+				justify-content: left;
+			}
+
+		}
+
+		@media(max-width: 900px) {
+
+			#secondAngle {
+				opacity: 1;
+				width: 100%;
+				margin: 0;
+				transform: translateY(0);
+				transition: opacity 2s ease-in-out;
+				background-color: #6b6b6b;
+				/* transform: translateY(50px); */
+			}
+
+			#secondAngle::before {
+				content: '';
+				position: absolute;
+				top: 0;
+				left: 0;
+				width: 100%;
+				height: 100%;
+				background-color: #6b6b6b;
+				transform: skewY(-2deg);
+				transform-origin: 0% 100%;
+				z-index: -1;
+			}
+
+			#secondAngle::after {
+				content: '';
+				position: absolute;
+				top: 0;
+				left: 0;
+				width: 100%;
+				height: 100%;
+				background-color: #6b6b6b;
+				transform: skewY(2deg);
+				transform-origin: 0% 100%;
+				z-index: -1;
+			}
+
+			#FLLImage {
+				width: 70%;
+				height: auto;
+				float: left;
+				padding-top: 0.5rem;
+				padding-left: 13%;
+			}
+
+			#FLLHeading {
+				padding-top: 2rem;
+				margin-top: -1rem;
+				font-size: 160%;
+				font-family: Arial, Helvetica, sans-serif;
+				justify-content: left;
+			}
+
+			#FLLText {
+				font-size: 100%;
+				padding-right: 2rem;
+				font-family: Arial, Helvetica, sans-serif;
+				justify-content: left;
+			}
+
+		}
+
+		@media(min-width: 900px) {
+			#secondAngle {
+				opacity: 1;
+				width: 100%;
+				transform: translateY(0);
+				transition: opacity 2s ease-in-out;
+				background-color: #6b6b6b;
+				/* transform: translateY(50px); */
+			}
+
+			#secondAngle::before {
+				content: '';
+				position: absolute;
+				top: 0;
+				left: 0;
+				width: 100%;
+				height: 100%;
+				background-color: #6b6b6b;
+				transform: skewY(-2deg);
+				transform-origin: 0% 100%;
+				z-index: -1;
+			}
+
+			#secondAngle::after {
+				content: '';
+				position: absolute;
+				top: 0;
+				left: 0;
+				width: 100%;
+				height: 100%;
+				background-color: #6b6b6b;
+				transform: skewY(2deg);
+				transform-origin: 0% 100%;
+				z-index: -1;
+			}
+
+			#FLLImage {
+				width: 70%;
+				height: auto;
+				float: left;
+				padding-top: 0.5rem;
+				padding-left: 13%;
+			}
+
+			#FLLHeading {
+				padding-top: 2rem;
+				margin-top: -1rem;
+				font-size: 160%;
+				font-family: Arial, Helvetica, sans-serif;
+				justify-content: left;
+			}
+
+			#FLLText {
+				font-size: 100%;
+				padding-right: 2rem;
+				font-family: Arial, Helvetica, sans-serif;
+				justify-content: left;
+			}
+
+		}
+
+		@media(max-width: 900px) {
+
+			#thirdAngle {
+				opacity: 1;
+				width: 100%;
+				height: 80%;
+				margin: 0;
+				margin-bottom: 5rem;
+				padding-right: 1rem;
+				transition: opacity 2s ease-in-out;
+				background-color: #333;
+				transform: translateY(0);
+			}
+
+			#thirdAngle::before {
+				content: '';
+				position: absolute;
+				top: 0;
+				left: 0;
+				width: 100%;
+				height: 110%;
+				background-color: #333;
+				transform: skewY(-2deg);
+				transform-origin: 100% 100%;
+				z-index: -1;
+			}
+
+			#thirdAngle::after {
+				content: '';
+				position: absolute;
+				top: 0;
+				left: 0;
+				width: 100%;
+				height: 110%;
+				background-color: #333;
+				transform: skewY(2deg);
+				transform-origin: 100% 100%;
+				z-index: -1;
+			}
+
+			#intImage {
+				width: 100%;
+				height: auto;
+				float: right;
+				padding-right: 10%;
+			}
+
+			#intHeading {
+				padding-top: 4rem;
+				font-size: 170%;
+				font-family: Arial, Helvetica, sans-serif;
+				justify-content: left;
+			}
+
+			#intText {
+				font-size: 100%;
+				font-family: Arial, Helvetica, sans-serif;
+				justify-content: left;
+			}
+
+
+		}
+
+		@media(min-width: 900px) {
+			#thirdAngle {
+				opacity: 1;
+				width: 100%;
+				height: 48%;
+				transition: opacity 2s ease-in-out;
+				background-color: #6b6b6b;
+				transform: translateY(0);
+			}
+
+			#thirdAngle::before {
+				content: '';
+				position: absolute;
+				top: 0;
+				left: 0;
+				width: 100%;
+				height: 100%;
+				background-color: #333;
+				transform: skewY(2deg);
+				transform-origin: 0% 100%;
+				z-index: -1;
+			}
+
+			#intImage {
+				width: 70%;
+				height: auto;
+				float: right;
+				padding-right: 10%;
+				padding-top: 15%;
+
+			}
+
+			#intHeading {
+				padding-top: 4rem;
+				font-size: 160%;
+				font-family: Arial, Helvetica, sans-serif;
+				justify-content: left;
+			}
+
+			#intText {
+				font-size: 100%;
+				font-family: Arial, Helvetica, sans-serif;
+				justify-content: left;
+			}
+
+		}
+
+		@media(max-width: 900px) {
+			#forthAngle {
+				opacity: 1;
+				width: 100%;
+				margin: 0;
+				transition: opacity 2s ease-in-out;
+				background-color: #6b6b6b;
+				transform: translateY(0);
+				margin-bottom: 4rem;
+			}
+
+			#forthAngle::before {
+				content: '';
+				position: absolute;
+				top: 0;
+				left: 0;
+				width: 100%;
+				height: 100%;
+				background-color: #6b6b6b;
+				transform: skewY(-2deg);
+				transform-origin: 0% 100%;
+				z-index: -1;
+			}
+
+			/* #forthAngle::after {
+			content: '';
+			position: absolute;
+			top: 0;
+			left: 0;
+			width: 100%;
+			height: 100%;
+			background-color: #6b6b6b;
+			transform: skewY(2deg);
+			transform-origin: 0% 100%;
+			z-index: -1;
+		} */
+
+			#connectImage {
+				width: 80%;
+				height: auto;
+				float: left;
+				padding-top: 0.5rem;
+				padding-left: 13%;
+			}
+
+			#connectHeading {
+				padding-top: 3rem;
+				margin-top: -1rem;
+				font-size: 150%;
+				font-family: Arial, Helvetica, sans-serif;
+				justify-content: left;
+			}
+
+			#connectText {
+				font-size: 100%;
+				padding-right: 2rem;
+				font-family: Arial, Helvetica, sans-serif;
+				justify-content: left;
+			}
+
+		}
+
+		@media(min-width: 900px) {
+			#forthAngle {
+				opacity: 1;
+				width: 100%;
+				transition: opacity 2s ease-in-out;
+				background-color: #6b6b6b;
+				transform: translateY(0);
+				margin-bottom: 4rem;
+			}
+
+			#forthAngle::before {
+				content: '';
+				position: absolute;
+				top: 0;
+				left: 0;
+				width: 100%;
+				height: 100%;
+				background-color: #6b6b6b;
+				transform: skewY(-2deg);
+				transform-origin: 0% 100%;
+				z-index: -1;
+			}
+
+			/* #forthAngle::after {
+			content: '';
+			position: absolute;
+			top: 0;
+			left: 0;
+			width: 100%;
+			height: 100%;
+			background-color: #6b6b6b;
+			transform: skewY(2deg);
+			transform-origin: 0% 100%;
+			z-index: -1;
+		} */
+
+			#connectImage {
+				width: 80%;
+				height: auto;
+				float: left;
+				padding-top: 0.5rem;
+				padding-left: 13%;
+			}
+
+			#connectHeading {
+				padding-top: 1rem;
+				margin-top: -1rem;
+				font-size: 160%;
+				font-family: Arial, Helvetica, sans-serif;
+				justify-content: left;
+			}
+
+			#connectText {
+				font-size: 100%;
+				padding-right: 2rem;
+				font-family: Arial, Helvetica, sans-serif;
+				justify-content: left;
+			}
+
+		}
+
+		.paddingCard {
+			padding-bottom: 1.2rem;
+		}
+
+		#fullWidth {
+			width: 100%;
+			padding: 0;
+		}
+
+		.seasonHeading {
+			font-size: 180%;
+			text-align: center;
+			padding-top: 3rem;
+			font-family: Arial, Helvetica, sans-serif;
+		}
+
+		#gofundimg {
+			float: left;
+			padding-left: 5%;
+		}
+
+		#backimg {
+			float: left;
+			padding-left: 5%;
+			height: 7.5rem;
+		}
+
+		.campText {
+			float: left;
+			padding-left: 1rem;
+			padding-top: 6%;
+			font-size: 110%;
+		}
+
+		#heightChange {
+			height: 40%;
+			padding-bottom: 2rem;
+
 		}
 	</style>
 
@@ -1225,9 +1772,8 @@
 	<div id="Home" class="tabcontent">
 
 		<div class="jumbotron" id="homejumbo">
-			<p id="num" class="textShadow">18763</p>
+			<p id="num" class="textShadow"> Texpand</p>
 		</div>
-
 
 		<div class="row" id="homerow">
 
@@ -1237,34 +1783,34 @@
 					along with us. We are passionate about being part of creating interest in STEM skills in South
 					Africa, and bringing opportunities and hope to students that don’t have easy access to FTC and
 					robotics opportunities.</p>
-				<img class="Mission_img" src="images/Our_Mission.jpeg" alt="image of fattys drivetrain">
-				<img class="Mission_img" src="images/FLL_Day.jpg" alt="Outreach to Silverlea">
+				<img class="Mission_img" src="images/homepadgeone.png" alt="image of fattys drivetrain">
+				<img class="Mission_img" src="images/ICU.jpg" alt="Outreach to Silverlea">
 			</div>
 
 			<div class="col-12 col-sm-12 col-md-6 col-xl-6 Hcol home2">
 				<h5 id="glance">Our Team At A Glance</h5>
 				<div class="row">
-					<div class="col col-md-3">
+					<div class="col col-md-3 paddingCard">
 						<div class="card">
 							<img class="card_imgs" src="images/awards.png" class="card-img-top" alt="...">
 							<div class="card-body">
 								<h5 class="card-title">AWARDS WON</h5>
-								<p class="card-text">9</p>
+								<p class="card-text">13</p>
 							</div>
 						</div>
 					</div>
 
-					<div class="col col-md-3">
+					<div class="col col-md-3 paddingCard">
 						<div class="card">
 							<img class="card_imgs" src="images/members.png" class="card-img-top" alt="...">
 							<div class="card-body">
 								<h5 class="card-title" id="smaller">TEAM MEMBERS</h5>
-								<p class="card-text">14</p>
+								<p class="card-text">13</p>
 							</div>
 						</div>
 					</div>
 
-					<div class="col col-md-3">
+					<div class="col col-md-3 paddingCard">
 						<div class="card">
 							<img class="card_imgs" src="images/calender.png" class="card-img-top" alt="...">
 							<div class="card-body">
@@ -1274,12 +1820,12 @@
 						</div>
 					</div>
 
-					<div class="col col-md-3">
+					<div class="col col-md-3 paddingCard">
 						<div class="card">
 							<img class="card_imgs" src="images/support.png" class="card-img-top" alt="...">
 							<div class="card-body ">
 								<h5 class="card-title" id="smaller">TEAMS SUPPORTED</h5>
-								<p class="card-text">2</p>
+								<p class="card-text">24</p>
 							</div>
 						</div>
 					</div>
@@ -1332,22 +1878,27 @@
 	</div>
 
 	<div id="Sponsor" class="tabcontent">
+
 		<div class="jumbotron" id="sponjumbo">
 			<h2 id="hea" class="textShadow">Sponsorships</h2>
 		</div>
 
+
 		<div class="container-fluid" id="sponcon">
 
 			<div class="row">
-				<h6 id="sponsorhshipre">Sponsorships tiers for the 2023-2024 centerstage season</h6>
-			</div>
-
-			<div class="row">
-				<div class="col-12 col-sm-12 col-md-12 col-xl-12">
-					<img id="sponsorSlide" src="images/FTC Sponsorship slides (Page 1).jpg" alt="">
+				<div class="col-12 col-sm-12 col-md-6 col-xl-6" id="heightChange">
+					<a href="https://gofund.me/c1dc51d5" target="_blank"><img id="gofundimg"
+							src="images/goFundMe logo.png" alt="">
+					</a>
+					<p class="campText">goFundMe campaign</p>
+				</div>
+				<div class="col-12 col-sm-12 col-md-6 col-xl-6" id="heightChange">
+					<a href="https://www.backabuddy.co.za/champion/project/texpand-ftc-5826906396642016318/"
+						target="_blank"><img id="backimg" src="images/BackaBuddy logo.png" alt=""></a>
+					<p class="campText">Back-a-buddy campaign</p>
 				</div>
 			</div>
-
 
 			<div class="row RowVid2" id="morepadding">
 				<div class="col-12 col-sm-12 col-md-12 col-xl-12 imags34">
@@ -1416,6 +1967,17 @@
 					</div>
 				</div>
 			</div>
+
+			<!-- <div class="row">
+				<h6 id="sponsorhshipre">Sponsorships tiers for the 2023-2024 centerstage season</h6>
+			</div>
+
+			<div class="row">
+				<div class="col-12 col-sm-12 col-md-12 col-xl-12">
+					<img id="sponsorSlide" src="images/0221.png" alt="">
+				</div>
+			</div> -->
+
 		</div>
 
 		<div class="row footer">
@@ -1772,59 +2334,74 @@
 	</div>
 
 	<div id="Outreach" class="tabcontent">
+
 		<div class="jumbotron" id="outjumbo">
 			<h2 id="hea" class="textShadow">Outreach</h2>
 		</div>
 
-		<div class="row outrow1" id="outrow1">
-			<div class="col-12 col-sm-12 col-md-6 col-xl-6 Ocol">
-				<h5 class="Tsizeb">Expanding STEM Skills through Robotics</h5>
-				<p class="Tsize"> The cost of professional robotics coaching is high and does not fit within the budget
-					of everyone who is passionate about robotics. So, we have adopted a pay-it-forward coaching method,
+
+
+		<div class="row" id="firstAngle">
+			<div class="col-12 col-sm-12 col-md-7 col-xl-7">
+				<h5 id="expandHeading">Expanding STEM Skills through Robotics</h5>
+				<p id="expandText"> The cost of professional robotics coaching is high and does not fit within the
+					budget
+					of everyone who is passionate about robotics. So, we have adopted a pay-it-forward coaching
+					method,
 					where we coach others, and subsequently those whom we taught, go on to coach others. If a team
-					member has a skill, they take on the task of teaching that skill to others in the team who have an
+					member has a skill, they take on the task of teaching that skill to others in the team who have
+					an
 					interest in it.</p>
-				<img class="homeimg" src="images/Silverlea_outreach2.jpeg" alt="image of fattys drivetrain">
 			</div>
-
-
-			<div class="col-12 col-sm-12 col-md-6 col-xl-6 Ocol">
-				<h1 class="Tsizeb">Silverlea Primary Robotics Club</h1>
-				<p class="Tsize"> We have helped Silverlea Primary start an FLL team by sourcing the R3300 required for
-					them to register a new team. In addititon we have spent many hours training them on thing like
-					gears, solution design, coding, control systems, game strategy and presentation skills. They
-					recently won the “Robot Design Award” in the Western Cape FLL competition.</p>
-				<img class="homeimg" src="images/Silverlea_outreach.jpeg" alt="image of fattys drivetrain">
+			<div class="col-12 col-sm-12 col-md-5 col-xl-5">
+				<img id="expandImage" src="images/IMG_20230901_120610.jpg" alt="image of fattys drivetrain">
 			</div>
 		</div>
 
-		<div class="row outrow1" id="outrow1">
-			<div class="col-12 col-sm-12 col-md-6 col-xl-6 Ocol">
-				<h1 class="Tsizeb">Connecting with Industry Experts</h1>
-				<p class="Tsize"> We have reached out to various experts in our local STEM community who have been
-					excited to provide our team with training. These have included professionals in Robotics
-					Manufacturing and Engineering, Mechatronics Engineers, Software Engineers, Venture Capital Experts,
-					Agile Methodology Experts.</p>
-				<img class="homeimgsize" src="images/HG_Molenaar.jpeg" alt="image of fattys drivetrain">
+		<div class="row" id="secondAngle">
+			<div class="col-12 col-sm-12 col-md-5 col-xl-5">
+				<img id="FLLImage" src="images/Our_Mission.jpeg" alt="image of fattys drivetrain">
+			</div>
+			<div class="col-12 col-sm-12 col-md-7 col-xl-7">
+				<h5 id="FLLHeading">Coaching FIRST teams in SA</h5>
+				<p id="FLLText"> We have coached 5 FLL teams from a school in athlone with a 8 week FLL training
+					course that we developed to give students with no robotics experience training on the different
+					aspects of FLL. We also have coached an FTC from Mfuleni and one from Gqeberha on their robots
+					and portfolios</p>
 			</div>
 
-			<div class="col-12 col-sm-12 col-md-6 col-xl-6 Ocol">
-				<h1 class="Tsizeb">Connecting with FIRST community</h1>
-				<p class=" Tsize"> We have reached out to other more experienced teams in the FIRST community who have
+		</div>
+
+		<div class="row" id="thirdAngle">
+			<div class="col-12 col-sm-12 col-md-7 col-xl-7">
+				<h5 id="intHeading">Connecting with FIRST community</h5>
+				<p id="intText"> We have reached out to other more experienced teams in the FIRST community who have
 					inspired us expand our horizons and pointed us in the right direction when we have encountered
-					difficulties. These include a First Robotics Team and top FTC team whose performance we admired.</p>
-				<img class="homeimg" src="images/Screenshot (101).png" alt="image of fattys drivetrain">
+					difficulties. These include a First Robotics Team and top FTC team whose performance we admired.
+				</p>
+			</div>
+			<div class="col-12 col-sm-12 col-md-5 col-xl-5 center">
+				<img id="intImage" src="images/Screenshot (101).png" alt="image of fattys drivetrain">
 			</div>
 		</div>
 
-		<div class="row outrow1" id="outrowb">
-			<div class="col-12 col-sm-12 col-md-6 col-xl-6 Ocol">
-				<h1 class="Tsizeb">Increasing awareness of FIRST</h1>
-				<p class="Tsize"> We arranged an outreach event at Pinelands High School to create awareness of FIRST
-					and FTC. They have since started an FTC team which hopes to compete in the next season.</p>
-				<img class="homeimg" src="images/Outreach_pic.jpeg" alt="image of fattys drivetrain">
+		<div class="row" id="forthAngle">
+			<div class="col-12 col-sm-12 col-md-5 col-xl-5 center">
+				<img id="connectImage" src="images/20231117_145331.jpg" alt="image of fattys drivetrain">
+			</div>
+			<div class="col-12 col-sm-12 col-md-7 col-xl-7">
+				<h5 id="connectHeading">Connecting with Industry Experts</h5>
+				<p id="connectText"> We have reached out to various experts in our local STEM community who have
+					been
+					excited to provide our team with training. These have included professionals in Robotics
+					Manufacturing and Engineering, Mechatronics Engineers, Software Engineers, Venture Capital
+					Experts,
+					Agile Methodology Experts.</p>
 			</div>
 		</div>
+
+
+
 
 		<div class="row footer">
 
@@ -1864,16 +2441,19 @@
 			<div class="col-12 col-sm-12 col-md-6 col-xl-6 us_clou">
 				<h1 class="Tsizeb">Who are we</h1>
 				<p class="Tsize">We are Texpand, a First Tech Challenge (FTC) team founded by a group of friends in Cape
-					Town, South Africa. Relatively new to FTC, our passion for technology has grown 10 fold since we
-					were founded. We now have a spread of experience with 4 members in their 3rd year 2 members in their
-					2nd
-					year and 3 members in
-					their 1st year. We don’t have technical coaches, so we have learned everything we know from online
+					Town, South Africa. Our team was started to make FTC accessible to communities that don’t have a
+					school team to join. We are based in Pinelands but our members are spread from Simon's Town to
+					Robertson. We have combined spread of 27 years of FTC experience with members ranging from their
+					1st to 5th years in FTC. We don’t have technical coaches, so we have learned everything we know from
+					online
 					resources, seeking input and mentoring from industry professionals and from other teams in the FIRST
-					community. Having also learned a lot from competing at worlds this year, we hope to pass on what we
-					have learned on to other teams in South Africa</p>
-				<img class="Us_imgs" src="images/Us.jpeg" alt="image of fattys drivetrain">
-				<img class="Us_imgs" src="images/IMG_20220709_091801.jpg" alt="Image of competition day">
+					community. Having also learned a lot from competing at worlds last year, we hope to pass on what we
+					have learned on to other teams who are starting out or want to add more advanced features to their
+					robot
+				</p>
+				<img class="Us_imgs" src="images/IMG20240127082427.jpg" alt="image of fattys drivetrain">
+				<img class="Us_imgs" src="images/Texpand Drive team- Ethan, Ben, Matthew.JPG"
+					alt="Image of competition day">
 			</div>
 
 
@@ -1896,7 +2476,9 @@
 			</div>
 
 		</div>
+
 		<h5 id="space">Achievements and Awards</h5>
+
 		<div class="row USA">
 			<div class="col-12 col-sm-12 col-md-6 col-xl-6 USAcol uscol">
 				<h1>2021 - Ultimate Goal</h1>
@@ -1943,7 +2525,7 @@
 			</div>
 		</div>
 
-		<div class="row USA" id="paddingfooter">
+		<div class="row USA">
 			<div class="col-12 col-sm-12 col-md-6 col-xl-6 USAcol uscol">
 				<h1>2023 - PowerPlay - Worlds Championship</h1>
 
@@ -1954,6 +2536,19 @@
 			</div>
 			<div class="col-12 col-sm-12 col-md-6 col-xl-6 uscoltest">
 				<img class="WorldsThink" src="images/Think .jpg" alt="Awards from Worlds">
+
+			</div>
+		</div>
+
+		<div class="row USA" id="paddingfooter">
+			<div class="col-12 col-sm-12 col-md-6 col-xl-6 USAcol uscol">
+				<h1>2024 - CenterStage - South Africa</h1>
+
+				<p class="text"> SA regionals Inspire award - SA regionals winning aliance captain</p>
+
+			</div>
+			<div class="col-12 col-sm-12 col-md-6 col-xl-6 uscoltest">
+				<img class="homeimg4" src="images/AWARDS CENTERSTAGE REG.jpg" alt="Awards from PowerPlay">
 
 			</div>
 		</div>
@@ -1988,6 +2583,7 @@
 	</div>
 
 	<div id="PBots" class="tabcontent">
+
 		<div class="jumbotron" id="pastjumbo">
 			<h2 id="hea" class="textShadow"> Past Robots</h2>
 		</div>
@@ -1995,14 +2591,17 @@
 		<div id="PastBots">
 
 			<div class="row" id="buffvid">
+				<H6 class="seasonHeading">PowerPlay 2022-2023 season</H6>
 				<h3 id="headingbuff" class="col-12 col-sm-6 col-md-6 col-xl-6 ">Our 2022-2023 PowerPlay, award winning
 					robot, was called "Buff". The descriptions of
 					“Buff's” subsystems are below. Also see our robot reveal for "Buff" on the left
 				</h3>
 
 				<div class="col-12 col-sm-6 col-md-6 col-xl-6" id="videobuff">
-					<Iframe width="450rem" height="250rem" src="https://www.youtube.com/embed/_B_p0qiay60"></Iframe>
+					<Iframe id="videobuff" width="450rem" height="250rem"
+						src="https://www.youtube.com/embed/_B_p0qiay60"></Iframe>
 				</div>
+
 			</div>
 
 			<div class="container-fluid">
@@ -2082,6 +2681,7 @@
 				</div>
 			</div>
 
+			<H6 class="seasonHeading">Freight Frenzy 2021-2022 season</H6>
 			<h3 id="heading">Our 2021-2022 Freight Frenzy, award winning robot, was called "Skinny". The descriptions of
 				“Skinny’s” subsystems are below:
 			</h3>
@@ -2157,7 +2757,7 @@
 					</div>
 				</div>
 
-
+				<H6 class="seasonHeading">Ultimate goal 2020-2021 season</H6>
 				<h3 id="heading">Our 2020-2021 Ultimate goal, award winning robot, was affectionately called "Fatty".
 					The descriptions of “Fatty’s” subsystems are below: </h3>
 
@@ -2266,6 +2866,102 @@
 	</div>
 
 	<script type="text/javascript">
+
+		$(document).ready(function () {
+			var fadeText = $('#firstAngle');
+
+			function fadeInOnScroll() {
+				var elementTop = fadeText.offset().top;
+				var elementBottom = elementTop + fadeText.outerHeight();
+				var viewportTop = $(window).scrollTop();
+				var viewportBottom = viewportTop + $(window).height();
+
+				// Check if the element is in the viewport
+				if (elementTop < viewportBottom && elementBottom > viewportTop) {
+					fadeText.addClass('show');
+				} else {
+					fadeText.removeClass('show');
+				}
+			}
+
+			// Initial check when the page loads
+			fadeInOnScroll();
+
+			// Listen for scroll events and trigger the function
+			$(window).scroll(fadeInOnScroll);
+		});
+
+		$(document).ready(function () {
+			var fadeText = $('#secondAngle');
+
+			function fadeInOnScroll() {
+				var elementTop = fadeText.offset().top;
+				var elementBottom = elementTop + fadeText.outerHeight();
+				var viewportTop = $(window).scrollTop();
+				var viewportBottom = viewportTop + $(window).height();
+
+				// Check if the element is in the viewport
+				if (elementTop < viewportBottom && elementBottom > viewportTop) {
+					fadeText.addClass('show');
+				} else {
+					fadeText.removeClass('show');
+				}
+			}
+
+			// Initial check when the page loads
+			fadeInOnScroll();
+
+			// Listen for scroll events and trigger the function
+			$(window).scroll(fadeInOnScroll);
+		});
+
+		$(document).ready(function () {
+			var fadeText = $('#forthAngle');
+
+			function fadeInOnScroll() {
+				var elementTop = fadeText.offset().top;
+				var elementBottom = elementTop + fadeText.outerHeight();
+				var viewportTop = $(window).scrollTop();
+				var viewportBottom = viewportTop + $(window).height();
+
+				// Check if the element is in the viewport
+				if (elementTop < viewportBottom && elementBottom > viewportTop) {
+					fadeText.addClass('show');
+				} else {
+					fadeText.removeClass('show');
+				}
+			}
+
+			// Initial check when the page loads
+			fadeInOnScroll();
+
+			// Listen for scroll events and trigger the function
+			$(window).scroll(fadeInOnScroll);
+		});
+
+		$(document).ready(function () {
+			var fadeText = $('#thirdAngle');
+
+			function fadeInOnScroll() {
+				var elementTop = fadeText.offset().top;
+				var elementBottom = elementTop + fadeText.outerHeight();
+				var viewportTop = $(window).scrollTop();
+				var viewportBottom = viewportTop + $(window).height();
+
+				// Check if the element is in the viewport
+				if (elementTop < viewportBottom && elementBottom > viewportTop) {
+					fadeText.addClass('show');
+				} else {
+					fadeText.removeClass('show');
+				}
+			}
+
+			// Initial check when the page loads
+			fadeInOnScroll();
+
+			// Listen for scroll events and trigger the function
+			$(window).scroll(fadeInOnScroll);
+		});
 
 		$("#Home").css({ "display": "block" });
 		$("#Don").css({ "display": "none" });
