@@ -1791,6 +1791,54 @@
 		#paddingPart {
 			padding-top: 2rem;
 		}
+
+		#InfoSession {
+			background-color: #333;
+			border-style: solid;
+			border-radius: 3% / 20%;
+			border-color: rgb(90, 88, 88);
+		}
+
+		#infotext {
+			font-family: Arial, Helvetica, sans-serif;
+			font-weight: 600;
+			font-size: 2vw;
+			padding-left: 2vw;
+			padding-top: 0.6vw;
+			padding-bottom: 0.6vw;
+			margin: 0;
+		}
+
+		.buttonStyles {
+			background-color: #04AA6D;
+			border: none;
+			color: white;
+			height: 9vw;
+			padding: 2vw 2vw;
+			text-align: center;
+			font-family: Arial, Helvetica, sans-serif;
+			font-size: 1.8vw;
+			text-decoration: none;
+			display: inline-block;
+			border-radius: 1vw;
+			margin-left: 2vw;
+		}
+
+		@media(min-width: 900px) {
+			.buttonStyles {
+				background-color: #04AA6D;
+				border: none;
+				color: white;
+				padding: 2vw 2vw;
+				text-align: center;
+				font-family: Arial, Helvetica, sans-serif;
+				font-size: 1.8vw;
+				text-decoration: none;
+				display: inline-block;
+				border-radius: 1vw;
+				margin-left: 2vw;
+			}
+		}
 	</style>
 
 </head>
@@ -1845,6 +1893,29 @@
 
 		<div class="jumbotron" id="homejumbo">
 			<p id="num" class="textShadow"> Texpand</p>
+		</div>
+
+		<div class="row" style="padding-bottom: 0; padding-top: 1vw;">
+			<div id="InfoSession" class="col-12 col-sm-12 col-md-12 col-xl-12"
+				style="height: 15vw; display: inline-flex; padding-top: 0.8vw;">
+				<img src="images/Ignite-logo-only.png" alt="" style="height: 13vw;">
+				<div>
+					<h1 id="infotext">For more info on the Ignite Robotics International initiative visit the links
+						below</h1>
+					<div style="display: inline-flex; padding-left: 2vw;">
+						<p style="width: 50%; font-size: 1.5vw;">This initiative is to expose more young South Africans
+							to
+							FTC and the
+							world of robotics as an amazing way to have fun and learn valuable STEM skills</p>
+						<button class="buttonStyles"
+							onclick="window.open('https://www.igniteroboticsinternational.org/events', '_blank')">Info
+							Session Sign up</button>
+						<button class="buttonStyles"
+							onclick="window.open('https://youtu.be/V2cJhmhxSt0?si=4flilZv7JUnMqMHx', '_blank')">Intro
+							Video</button>
+					</div>
+				</div>
+			</div>
 		</div>
 
 		<div class="row" id="homerow">
