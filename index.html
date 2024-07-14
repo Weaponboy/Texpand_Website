@@ -1,0 +1,3258 @@
+<HTML>
+
+<head>
+
+	<link rel="icon" href="images/txpand_logo-removebg-preview.png">
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+	<title>18763 Texpand</title>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet"
+		integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">
+	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js"
+		integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa"
+		crossorigin="anonymous"></script>
+
+
+	<style>
+		body {
+			background-color: rgb(90, 88, 88);
+			margin: 0;
+			padding: 0;
+			user-select: none;
+		}
+
+		#img {
+			width: 5.6%;
+			height: auto;
+		}
+
+		@supports (-webkit-touch-callout: none) {
+			#img {
+				width: 5.6%;
+				height: auto;
+			}
+		}
+
+		#topBar {
+			position: fixed;
+			list-style-type: none;
+			width: 100%;
+			height: 10% !important;
+			display: inline-block;
+			overflow: hidden;
+			background-color: #333;
+			z-index: 999;
+		}
+
+		.topbar-section {
+			color: white;
+			text-align: center;
+			padding: 3.5% .5rem;
+			display: inline-block;
+			font-family: "Helvetica ", sans-serif;
+			font-weight: 100;
+			width: 10vw;
+			height: 100%;
+		}
+
+		#h {
+			color: rgb(253, 253, 253);
+			font-family: "Helvetica ", sans-serif;
+			text-decoration: none;
+			font-weight: 100;
+			font-size: 100%;
+
+		}
+
+		#heo {
+			display: inline-block;
+			text-align: center;
+			padding: 1.6rem 0.6%;
+
+		}
+
+		.tabs {
+			font-size: 100%;
+			font-weight: 100;
+		}
+
+		.topbar-section:hover {
+			background-color: #111;
+		}
+
+		.Toggle {
+			position: absolute;
+			top: 2.1rem;
+			right: 1rem;
+			display: none;
+			flex-direction: column;
+			justify-content: space-between;
+			width: 30px;
+			height: 21px;
+		}
+
+		.Toggle .bar {
+			height: 3px;
+			width: 100%;
+			background-color: white;
+			border-radius: 10px;
+		}
+
+		#Test {
+			margin-right: 10px;
+			float: right;
+			margin: 0;
+			padding: 0;
+		}
+
+		.test2 {
+			display: block;
+		}
+
+		@media(max-width: 1050px) {
+
+			#topBar {
+				height: auto !important;
+			}
+
+			.Toggle {
+				position: absolute;
+				top: 2.8vh;
+				right: 1rem;
+			}
+
+			.Toggle {
+				display: flex;
+			}
+
+			#img {
+				width: 8%;
+			}
+
+			#topbar {
+				height: auto;
+			}
+
+			.topbar-section {
+				display: block;
+			}
+
+			.topbar-section {
+				width: 100%;
+				padding: .7rem;
+			}
+
+			#Test {
+				text-align: center;
+				width: 100%;
+				margin-right: 0;
+			}
+
+			.test2 {
+				display: none;
+			}
+
+			.HomeTexpandlogo {
+				display: block;
+				width: 40%;
+				height: auto;
+			}
+
+			#h {
+				font-size: 80%;
+			}
+
+		}
+
+		@media(max-width: 450px) {
+			#h {
+				font-size: 60%;
+			}
+		}
+
+		.HomeTexpandlogo {
+			margin-top: 2.5rem !important;
+			margin: auto !important;
+			display: block !important;
+			width: 27%;
+		}
+
+		h2 {
+			text-align: center !important;
+			padding-top: 7rem !important;
+			margin-left: 35% !important;
+			margin-right: 35% !important;
+			font-size: 35px !important;
+			font-family: Arial, Helvetica, sans-serif !important;
+			color: white !important;
+
+		}
+
+		h3 {
+			text-align: center;
+			padding-top: 3rem;
+			padding-bottom: 1rem;
+		}
+
+		.HomeTeXpand {
+			text-align: center;
+			font-family: Arial, Helvetica, sans-serif;
+			color: white;
+
+		}
+
+		#SponsorsImageDiv {
+			margin-left: 45%;
+
+		}
+
+		.tabcontent {
+			text-align: justify;
+			padding-top: 2rem;
+			padding-bottom: 20px;
+			max-height: min-content;
+			font-size: 21px;
+			font-family: Arial, Helvetica, sans-serif;
+			color: rgb(255, 255, 255);
+			animation: fadeEffect 1s;
+		}
+
+		p.tabcontent {
+			padding-left: 1.5 rem;
+			padding-right: 1.5 rem;
+		}
+
+		@keyframes fadeEffect {
+			from {
+				opacity: 0;
+			}
+
+			to {
+				opacity: 1;
+			}
+		}
+
+		#team {
+			font-weight: 700;
+			font-size: 240%;
+			padding: 0;
+			margin: 0;
+			color: white;
+		}
+
+		#num {
+			font-weight: 700;
+			font-size: 500%;
+			color: white;
+		}
+
+		#im {
+			width: 12rem;
+			margin-bottom: 0;
+			padding-bottom: 0;
+		}
+
+		#heading {
+			text-align: center;
+			padding-left: 10rem;
+			padding-right: 10rem;
+			padding-bottom: 2rem;
+			max-height: min-content;
+			font-size: 140%;
+			font-family: Arial, Helvetica, sans-serif;
+			color: rgb(255, 255, 255);
+		}
+
+		@media (max-width: 600px) {
+			#heading {
+				padding-left: 2rem;
+				padding-right: 2rem;
+			}
+		}
+
+		@media (max-width: 800px) {
+			#heading {
+				padding-left: 4rem;
+				padding-right: 4rem;
+			}
+		}
+
+		@media (max-width: 800px) {
+			.imgs {
+				width: 55%;
+				height: auto;
+				padding-bottom: 2rem;
+			}
+		}
+
+		@media (max-width: 700px) {
+			.imgs {
+				width: 45%;
+				height: auto;
+				padding-bottom: 2rem;
+			}
+		}
+
+		@media (max-width: 600px) {
+			.imgs {
+				width: 43%;
+				height: auto;
+				padding-bottom: 2rem;
+				padding-top: 2rem;
+			}
+		}
+
+		#headingMax {
+			text-align: center;
+			padding-left: 0rem;
+			padding-right: 0rem;
+			padding-bottom: 2rem;
+			max-height: min-content;
+			font-size: 100%;
+			font-family: Arial, Helvetica, sans-serif;
+			color: rgb(255, 255, 255);
+		}
+
+		#headingbuff {
+			text-align: center;
+			padding-top: 4rem;
+			padding-left: 0rem;
+			padding-right: 0rem;
+			padding-bottom: 2rem;
+			max-height: min-content;
+			font-size: 110%;
+			font-family: Arial, Helvetica, sans-serif;
+			color: rgb(255, 255, 255);
+		}
+
+		#PBots {
+			animation: fadeEffect 1s;
+		}
+
+		.row {
+			color: white;
+			width: 100%;
+			padding-left: 2rem;
+		}
+
+		.colt {
+			text-align: center;
+			padding-top: 1.2rem;
+			background-color: #333;
+		}
+
+		.jumbotron {
+			background-color: rgb(121, 122, 143);
+		}
+
+		.imgs {
+			width: 80%;
+			height: 80%;
+		}
+
+		.card-body {
+			background-color: rgb(90, 90, 88);
+			font-size: 110%;
+			text-align: center;
+		}
+
+		.card-title {
+			font-size: 72%;
+			font-weight: 520;
+		}
+
+		#outhead {
+			padding-top: 4rem;
+			text-align: center;
+
+		}
+
+		.outtext {
+			text-align: center;
+		}
+
+		.ustext {
+			text-align: center;
+		}
+
+		#pinepic {
+			text-align: center;
+			padding-bottom: 2rem;
+		}
+
+		#PICPINE {
+			width: 40%;
+			height: auto;
+		}
+
+		#glance {
+			text-align: center;
+			font-size: 180%;
+			padding-bottom: 2rem;
+			padding-top: 0rem;
+		}
+
+		#don3 {
+			text-align: center;
+		}
+
+		#don4 {
+			text-align: center;
+		}
+
+		#expand {
+			text-align: center;
+			font-size: 160%;
+			padding-top: 5rem;
+			padding-bottom: 3rem;
+		}
+
+		#conect {
+			text-align: center;
+			font-size: 140%;
+			padding-top: 4rem;
+			padding-bottom: 1rem;
+		}
+
+		#silver {
+			text-align: center;
+			font-size: 140%;
+			padding-top: 2rem;
+		}
+
+		#imag {
+			text-align: center;
+			width: 70%;
+			height: auto;
+			padding-left: 20rem;
+		}
+
+		.soop {
+			text-align: center;
+			margin-top: 2rem;
+		}
+
+		#hellooo {
+			padding-bottom: 2rem;
+		}
+
+		.sponsors1 {
+			padding-left: 29%;
+			margin-bottom: 1rem;
+			width: 70%;
+		}
+
+		#homejumbo {
+			background-image: url(images/Team\ pic.jpg);
+			background-position-x: center;
+			background-position-y: center;
+			background-size: cover;
+			font-family: "Helvetica ", sans-serif;
+			text-align: center;
+			padding-top: 12rem;
+			padding-bottom: 10.7rem;
+			margin: 0;
+			color: rgb(0, 0, 0);
+		}
+
+		@media (max-width: 600px) {
+			#homejumbo {
+				background-image: url(images/Team\ pic.jpg);
+				background-position-x: center;
+				background-position-y: center;
+				background-size: cover;
+				font-family: "Helvetica ", sans-serif;
+				text-align: center;
+				padding-top: 3rem;
+				padding-bottom: 0rem;
+				margin: 0;
+				color: rgb(0, 0, 0);
+			}
+		}
+
+		#Home {
+			width: 100%;
+		}
+
+		@media (min-width: 1400px) {
+
+			#homejumbo {
+				margin-left: 15%;
+				margin-right: 15%;
+			}
+
+			#sponjumbo {
+				margin-left: 15%;
+				margin-right: 15%;
+			}
+
+			#outjumbo {
+				margin-left: 15%;
+				margin-right: 15%;
+			}
+
+			.Tsizeb {
+				font-size: 290%;
+			}
+
+			.Tsize {
+				font-size: 130%;
+			}
+		}
+
+		@media (min-width: 1500px) {
+
+			#homejumbo {
+				margin-left: 20%;
+				margin-right: 20%;
+			}
+
+			#sponjumbo {
+				margin-left: 20%;
+				margin-right: 20%;
+			}
+
+			#outjumbo {
+				margin-left: 20%;
+				margin-right: 20%;
+			}
+
+			.Tsize {
+				font-size: 140%;
+			}
+
+			.Tsizeb {
+				font-size: 220%;
+			}
+		}
+
+		.Tsize {
+			font-size: 100%;
+		}
+
+		.Tsizeb {
+			font-size: 180%;
+		}
+
+		#sponjumbo {
+			font-family: "Helvetica ", sans-serif;
+			text-align: center;
+			padding-top: -2rem;
+			padding-bottom: 4rem;
+			margin: 0;
+			color: rgb(0, 0, 0);
+		}
+
+		#outjumbo {
+			font-family: "Helvetica ", sans-serif;
+			text-align: center;
+			padding-top: -2rem;
+			padding-bottom: 4rem;
+			margin: 0;
+			color: rgb(0, 0, 0);
+		}
+
+		#usjumbo {
+			padding-top: -2rem;
+			padding-bottom: 4rem;
+		}
+
+		#pastjumbo {
+			padding-top: -2rem;
+			padding-bottom: 4rem;
+			font-family: "Helvetica ", sans-serif;
+			text-align: center;
+			margin: 0;
+			color: rgb(0, 0, 0);
+		}
+
+		#homerow {
+			padding-top: 1rem;
+			padding-bottom: 2rem;
+		}
+
+		.Hcol {
+			text-align: center;
+			padding-top: 2rem;
+		}
+
+		.stl {
+			background-color: #333;
+			border-radius: 3%;
+		}
+
+		.stlY {
+			background-color: #333;
+			border-radius: 3%;
+			padding-bottom: 2REM;
+		}
+
+		.USA {
+			padding-top: 2rem;
+		}
+
+		.USAcol {
+			text-align: center;
+			background-color: #333;
+			border-radius: 3%;
+		}
+
+		#centerUG {
+			margin-bottom: 2rem;
+		}
+
+		.uscol {
+			padding-top: 1.5rem;
+			border-radius: 3rem;
+			border-style: solid;
+			border-color: rgb(90, 88, 88);
+			text-align: center;
+		}
+
+		#glace_row {
+			padding-left: 10%;
+			padding-right: 10%;
+			padding-bottom: 3%;
+		}
+
+		#miss-home {
+			font-size: 240%;
+		}
+
+		#miss_text {
+			font-size: 130%;
+		}
+
+		.outrow1 {
+			padding-top: 2%;
+			text-align: center;
+		}
+
+		.Ocol {
+			background-color: #333;
+			padding-top: 2%;
+			padding-bottom: 2%;
+			border-style: solid;
+			border-radius: 4%;
+			border-color: rgb(90, 88, 88);
+		}
+
+		#expand_text {
+			font-size: 120%;
+		}
+
+		.out_text {
+			font-size: 160%;
+		}
+
+		.out_text2 {
+			font-size: 140%;
+		}
+
+		.headOut {
+			font-size: 240%;
+		}
+
+		#outrowb {
+			padding-bottom: 5%;
+		}
+
+		@media (min-width: 1100px) {
+			.imgs {
+				height: 78%;
+			}
+
+
+		}
+
+		@media (max-width: 1100px) {
+
+			#home_miss {
+				padding-bottom: 2%;
+				border-radius: 6% / 5% !important;
+			}
+
+			.home2 {
+				background-color: #333;
+				border-style: solid;
+				border-radius: 7% / 2% !important;
+				border-color: rgb(90, 88, 88);
+			}
+
+			.imgs {
+				height: 78%;
+			}
+
+			.sponsors2 {
+				text-align: center;
+				width: 100%;
+			}
+
+			.sponsors3 {
+				padding-top: 2rem;
+				text-align: center;
+				width: 100%;
+			}
+
+			.sponsors4 {
+				padding-top: 2rem;
+				text-align: center;
+				width: 100%;
+			}
+
+			.sponsors5 {
+				padding-top: 5rem;
+				text-align: center;
+				width: 100%;
+			}
+
+			.sponsors1 {
+				text-align: center;
+				padding: 0;
+				padding-top: 5rem;
+				width: 100%;
+			}
+		}
+
+		@media (min-width: 200px) {
+			.imgs {
+				height: 85%;
+			}
+
+		}
+
+		.homeimg {
+			width: 80%;
+			height: auto;
+		}
+
+		.textShadow {
+			text-shadow: 4px 4px 5px #414141;
+		}
+
+		.imags {
+			text-align: center;
+		}
+
+		.Mission_img {
+			width: 40%;
+			height: auto;
+		}
+
+		#home_miss {
+			padding-bottom: 2%;
+			border-radius: 5% / 7%;
+		}
+
+		.card_imgs {
+			text-align: center;
+		}
+
+		.home2 {
+			background-color: #333;
+			border-style: solid;
+			border-radius: 5% / 7%;
+			border-color: rgb(90, 88, 88);
+		}
+
+		#smaller {
+			padding-top: 0.3rem;
+			font-size: 53%;
+		}
+
+		.Us_imgs {
+			width: 24%;
+		}
+
+		.us_clou {
+			background-color: #333;
+			border-style: solid;
+			border-radius: 4%;
+			border-color: rgb(90, 88, 88);
+			text-align: center;
+			padding-bottom: 2%;
+			padding-top: 2%;
+			border-radius: 3%;
+		}
+
+		.his_imgs {
+			width: 90%;
+		}
+
+		.homeimgsize {
+			width: 70%;
+		}
+
+		#space {
+			text-align: center;
+			font-size: 180%;
+			padding-bottom: 1rem;
+			padding-top: 1rem;
+		}
+
+		.homeimg4 {
+			width: 48%;
+		}
+
+		.WorldsThink {
+			width: 40%;
+		}
+
+		.uscoltest {
+			padding-top: 0.7rem;
+			text-align: center;
+		}
+
+		.sponsors2 {
+			text-align: center;
+			width: 100%;
+		}
+
+		.sponsors3 {
+			padding-bottom: 0.5rem;
+			text-align: center;
+			width: 60%;
+		}
+
+		.sponsors4 {
+			text-align: center;
+			width: 100%;
+		}
+
+		.sponsors5 {
+			text-align: center;
+			width: 100%;
+		}
+
+		.sponsors6 {
+			text-align: center;
+			width: 100%;
+		}
+
+		.sponsors7 {
+			text-align: center;
+			width: 100%;
+		}
+
+		.sponsors8 {
+			padding-bottom: 1rem;
+			text-align: center;
+			width: 70%;
+		}
+
+		.sponsors9 {
+			padding-top: 1rem;
+			text-align: center;
+			width: 100%;
+		}
+
+		.sponsors1 {
+			text-align: center;
+			padding: 0;
+			width: 100%;
+		}
+
+		.imags4 {
+			text-align: center;
+		}
+
+		.padd {
+			padding-bottom: 3rem;
+		}
+
+		#textf {
+			padding-top: 4rem;
+			padding-left: 2.5rem;
+			padding-right: 2.5rem;
+			color: white;
+			text-align: center;
+			font-family: Arial, Helvetica, sans-serif;
+			font-weight: 550;
+		}
+
+		#textf2 {
+			padding-top: 0rem;
+			padding-left: 0rem;
+			padding-right: 0rem;
+			color: white;
+			text-align: center;
+			font-family: Arial, Helvetica, sans-serif;
+			font-weight: 550;
+		}
+
+
+		#textspon {
+			padding-top: 0rem;
+			color: white;
+			text-align: center;
+			font-family: Arial, Helvetica, sans-serif;
+			font-weight: 550;
+		}
+
+		.imags6 {
+			padding-top: 3rem;
+			height: auto;
+		}
+
+		.RowVid {
+			text-align: center;
+			padding-bottom: 2rem;
+			width: 100%;
+		}
+
+		@media (max-width: 900px) {
+
+			#textf {
+				padding-top: 4rem;
+				padding-left: 0rem;
+				padding-right: 0rem;
+				color: white;
+				text-align: center;
+				font-family: Arial, Helvetica, sans-serif;
+				font-weight: 550;
+			}
+
+			#textf2 {
+				padding-top: 1.5rem;
+				padding-left: 0rem;
+				padding-right: 0rem;
+				color: white;
+				text-align: center;
+				font-family: Arial, Helvetica, sans-serif;
+				font-weight: 550;
+			}
+
+			#textspon {
+				padding-top: 0.4rem;
+				color: white;
+				text-align: center;
+				font-family: Arial, Helvetica, sans-serif;
+				font-weight: 550;
+			}
+
+			.imags6 {
+				padding-top: 1rem;
+				padding-bottom: 1rem;
+				height: 15%;
+			}
+
+
+			#sponsorshipneeds {
+				width: 100%;
+			}
+
+			#te {
+				font-size: 40%;
+			}
+
+			#sponsorshipneedsfirst2 {
+				width: 100%;
+				height: auto;
+			}
+		}
+
+		@media (max-width: 900px) {
+
+			#videobuff {
+				width: 100%;
+				height: 70%;
+			}
+		}
+
+		.RowVid2 {
+			text-align: center;
+			padding-bottom: 0rem;
+		}
+
+		.RowVid23 {
+			text-align: center;
+			padding-bottom: 2rem;
+		}
+
+		.Rowtest {
+			text-align: center;
+			padding-bottom: 2rem;
+		}
+
+		#linkback {
+			color: white;
+		}
+
+		#linkback:hover {
+			color: black;
+		}
+
+		#sponsorshipneeds {
+			width: 70%;
+		}
+
+		#sponsorshipneeds23 {
+			width: 100%;
+		}
+
+		#sponsorshipneedsfirst {
+			width: 85%;
+		}
+
+		#sponsorshipneedsfirst2 {
+			width: 70%;
+		}
+
+		#textsponsor {
+			padding-top: 0rem;
+			margin: 0;
+			color: white;
+			text-align: center;
+			font-family: Arial, Helvetica, sans-serif;
+			font-size: 80%;
+			font-weight: 550;
+		}
+
+		.margin1 {
+			border: rgb(36, 36, 58);
+			border-style: solid;
+			margin: 0.2rem;
+			border-width: 0.4rem;
+			border-radius: 2rem;
+		}
+
+		.margin11 {
+			border: rgb(36, 36, 58);
+			border-style: solid;
+			margin: 0.2rem;
+			border-width: 0.4rem;
+			border-radius: 2rem;
+			margin-bottom: 2rem;
+		}
+
+		#paddingb {
+			padding-bottom: 0rem;
+		}
+
+		#paddingb2 {
+			padding-bottom: 10rem;
+		}
+
+		#leadspon {
+			font-size: 100%;
+			font-weight: 800;
+			color: #04aefd;
+			padding-top: 1rem;
+		}
+
+		#textlead {
+			font-size: 80%;
+		}
+
+		#textlead24 {
+			font-size: 110%;
+		}
+
+		#textlead2 {
+			font-size: 80%;
+			margin: 0;
+			padding: 0;
+		}
+
+		#textplat {
+			font-size: 80%;
+		}
+
+		#platspon {
+			font-size: 100%;
+			font-weight: 800;
+			color: #04aefd;
+			padding-top: 1rem;
+		}
+
+		#textforT {
+			text-align: center;
+		}
+
+		#usawards2022 {
+			text-align: center;
+			background-color: #333;
+		}
+
+		.text2 {
+			padding: 0.4rem;
+			font-size: 120%;
+		}
+
+		#videobuff {
+			text-align: center;
+			padding-top: 0rem;
+		}
+
+		#videomax {
+			text-align: center;
+			padding-top: 1.5rem;
+		}
+
+		#buffvid {
+			height: 25rem;
+			padding-bottom: 2rem;
+		}
+
+		#Maxvid {
+			height: 25rem;
+			padding-bottom: 2rem;
+		}
+
+		@media (max-width: 900px) {
+
+			#buffvid {
+				height: 50rem;
+				padding-bottom: 2rem;
+			}
+
+			#Maxvid {
+				height: 50rem;
+				padding-bottom: 2rem;
+			}
+
+		}
+
+		.buffimgs {
+			width: 14rem;
+			height: 14rem;
+		}
+
+		#desi2 {
+			width: 14rem;
+			height: 14rem;
+		}
+
+		.bufftext {
+			font-size: 80%;
+		}
+
+		.skinnytext {
+			font-size: 95%;
+		}
+
+		.halfimg {
+			width: 80%;
+			height: 7rem;
+		}
+
+		#Sponsor_Backup {
+			display: none;
+		}
+
+		#sponcon {
+			padding-top: 2rem;
+		}
+
+		.price {
+			font-size: 110%;
+			padding-top: 1rem;
+			padding-bottom: 1rem;
+			color: black;
+			font-weight: 900;
+		}
+
+		.price2 {
+			font-size: 115%;
+			color: black;
+			font-weight: 900;
+		}
+
+		#fllimg {
+			width: 95%;
+			padding-top: 0.6rem;
+			padding-bottom: 0.8rem;
+			border-radius: 3rem;
+		}
+
+		#buffimg {
+			border-radius: 3rem;
+			padding-top: 0.6rem;
+			padding-bottom: 0.8rem;
+			width: 16rem;
+		}
+
+		.mottext {
+			font-size: 96%;
+		}
+
+		.mottext2 {
+			font-size: 96%;
+		}
+
+		#textspon34 {
+			font-size: 140%;
+		}
+
+		#morepadding {
+			padding-top: 0rem;
+		}
+
+		.ContactUs {
+			width: 3rem;
+			height: 3rem;
+			border-radius: 1rem;
+			float: left;
+		}
+
+		.contacttext {
+			margin-left: 4rem;
+			padding-top: 0.5rem;
+			user-select: text;
+		}
+
+		.contacttext2 {
+			float: right;
+			user-select: text;
+		}
+
+		#paddingfooter {
+			padding-bottom: 4rem;
+		}
+
+		#sponsorhshipre {
+			font-size: 2rem;
+			text-align: center;
+			padding: 2rem;
+			font-family: Arial, Helvetica, sans-serif;
+		}
+
+		.imags3 {
+			height: 45rem;
+		}
+
+		.height {
+			height: auto;
+		}
+
+		.height2 {
+			height: 100%;
+		}
+
+		#Sponsor_Backup2 {
+			display: none;
+		}
+
+		#sponsorSlide {
+			width: 100%;
+		}
+
+		#FSILogo {
+			width: 50%;
+			height: auto;
+		}
+
+		#supportingSponsor {
+			font-size: 30rem;
+		}
+
+		@media(max-width: 900px) {
+
+			#firstAngle {
+				padding-top: 2rem;
+				padding-right: 1rem;
+				margin: 0;
+				opacity: 1;
+				width: 100%;
+				height: 80%;
+				margin-bottom: 3rem;
+				transform: translateY(0);
+				transition: opacity 2s ease-in-out;
+				background-color: #333;
+				z-index: -1;
+			}
+
+			#firstAngle::before {
+				content: '';
+				position: absolute;
+				top: 0;
+				left: 0;
+				width: 100%;
+				height: 106%;
+				background-color: #333;
+				transform-origin: 0% 100%;
+				transform: skewY(-2deg);
+				transform-origin: 100% 0%;
+				z-index: -1;
+
+			}
+
+			#expandImage {
+				width: 100%;
+				float: right;
+				padding-right: 10%;
+			}
+
+
+			#expandHeading {
+				font-size: 130%;
+				font-family: Arial, Helvetica, sans-serif;
+				justify-content: left;
+			}
+
+			#expandText {
+				font-size: 90%;
+				font-family: Arial, Helvetica, sans-serif;
+				justify-content: left;
+			}
+
+
+		}
+
+		@media(min-width: 900px) {
+
+			#firstAngle {
+				padding-top: 2rem;
+				opacity: 1;
+				width: 100%;
+				height: 39%;
+				margin-bottom: 3rem;
+				transform: translateY(0);
+				transition: opacity 2s ease-in-out;
+				background-color: #333;
+			}
+
+
+			#firstAngle::before {
+				content: '';
+				position: absolute;
+				top: 0;
+				left: 0;
+				width: 100%;
+				height: 115%;
+				background-color: #333;
+				transform-origin: 0% 100%;
+				transform: skewY(-2deg);
+				transform-origin: 100% 0%;
+				z-index: -1;
+			}
+
+
+			#expandImage {
+				width: 70%;
+				float: right;
+				padding-right: 10%;
+			}
+
+			#expandHeading {
+				font-size: 160%;
+				font-family: Arial, Helvetica, sans-serif;
+				justify-content: left;
+			}
+
+			#expandText {
+				font-size: 100%;
+				font-family: Arial, Helvetica, sans-serif;
+				justify-content: left;
+			}
+
+		}
+
+		@media(max-width: 900px) {
+
+			#secondAngle {
+				opacity: 1;
+				width: 100%;
+				margin: 0;
+				transform: translateY(0);
+				transition: opacity 2s ease-in-out;
+				background-color: #6b6b6b;
+				/* transform: translateY(50px); */
+			}
+
+			#secondAngle::before {
+				content: '';
+				position: absolute;
+				top: 0;
+				left: 0;
+				width: 100%;
+				height: 100%;
+				background-color: #6b6b6b;
+				transform: skewY(-2deg);
+				transform-origin: 0% 100%;
+				z-index: -1;
+			}
+
+			#secondAngle::after {
+				content: '';
+				position: absolute;
+				top: 0;
+				left: 0;
+				width: 100%;
+				height: 100%;
+				background-color: #6b6b6b;
+				transform: skewY(2deg);
+				transform-origin: 0% 100%;
+				z-index: -1;
+			}
+
+			#FLLImage {
+				width: 90%;
+				height: auto;
+				float: left;
+				padding-top: 0.5rem;
+				padding-left: 13%;
+			}
+
+			#FLLHeading {
+				padding-top: 2rem;
+				margin-top: -1rem;
+				font-size: 160%;
+				font-family: Arial, Helvetica, sans-serif;
+				justify-content: left;
+			}
+
+			#FLLText {
+				font-size: 100%;
+				padding-right: 2rem;
+				font-family: Arial, Helvetica, sans-serif;
+				justify-content: left;
+			}
+
+		}
+
+		@media(min-width: 900px) {
+			#secondAngle {
+				opacity: 1;
+				width: 100%;
+				transform: translateY(0);
+				transition: opacity 2s ease-in-out;
+				background-color: #6b6b6b;
+				/* transform: translateY(50px); */
+			}
+
+			#secondAngle::before {
+				content: '';
+				position: absolute;
+				top: 0;
+				left: 0;
+				width: 100%;
+				height: 100%;
+				background-color: #6b6b6b;
+				transform: skewY(-2deg);
+				transform-origin: 0% 100%;
+				z-index: -1;
+			}
+
+			#secondAngle::after {
+				content: '';
+				position: absolute;
+				top: 0;
+				left: 0;
+				width: 100%;
+				height: 100%;
+				background-color: #6b6b6b;
+				transform: skewY(2deg);
+				transform-origin: 0% 100%;
+				z-index: -1;
+			}
+
+			#FLLImage {
+				width: 90%;
+				height: auto;
+				float: left;
+				padding-top: 0.5rem;
+				padding-left: 13%;
+			}
+
+			#FLLHeading {
+				padding-top: 2rem;
+				margin-top: -1rem;
+				font-size: 160%;
+				font-family: Arial, Helvetica, sans-serif;
+				justify-content: left;
+			}
+
+			#FLLText {
+				font-size: 100%;
+				padding-right: 2rem;
+				font-family: Arial, Helvetica, sans-serif;
+				justify-content: left;
+			}
+
+		}
+
+		@media(max-width: 900px) {
+
+			#thirdAngle {
+				opacity: 1;
+				width: 100%;
+				height: 80%;
+				margin: 0;
+				margin-bottom: 5rem;
+				padding-right: 1rem;
+				transition: opacity 2s ease-in-out;
+				background-color: #333;
+				transform: translateY(0);
+			}
+
+			#thirdAngle::before {
+				content: '';
+				position: absolute;
+				top: 0;
+				left: 0;
+				width: 100%;
+				height: 110%;
+				background-color: #333;
+				transform: skewY(-2deg);
+				transform-origin: 100% 100%;
+				z-index: -1;
+			}
+
+			#thirdAngle::after {
+				content: '';
+				position: absolute;
+				top: 0;
+				left: 0;
+				width: 100%;
+				height: 110%;
+				background-color: #333;
+				transform: skewY(2deg);
+				transform-origin: 100% 100%;
+				z-index: -1;
+			}
+
+			#intImage {
+				width: 100%;
+				height: auto;
+				float: right;
+				padding-right: 10%;
+			}
+
+			#intHeading {
+				padding-top: 4rem;
+				font-size: 170%;
+				font-family: Arial, Helvetica, sans-serif;
+				justify-content: left;
+			}
+
+			#intText {
+				font-size: 100%;
+				font-family: Arial, Helvetica, sans-serif;
+				justify-content: left;
+			}
+
+
+		}
+
+		@media(min-width: 900px) {
+			#thirdAngle {
+				opacity: 1;
+				width: 100%;
+				height: 48%;
+				transition: opacity 2s ease-in-out;
+				background-color: #6b6b6b;
+				transform: translateY(0);
+			}
+
+			#thirdAngle::before {
+				content: '';
+				position: absolute;
+				top: 0;
+				left: 0;
+				width: 100%;
+				height: 100%;
+				background-color: #333;
+				transform: skewY(2deg);
+				transform-origin: 0% 100%;
+				z-index: -1;
+			}
+
+			#intImage {
+				width: 70%;
+				height: auto;
+				float: right;
+				padding-right: 10%;
+				padding-top: 15%;
+
+			}
+
+			#intHeading {
+				padding-top: 4rem;
+				font-size: 160%;
+				font-family: Arial, Helvetica, sans-serif;
+				justify-content: left;
+			}
+
+			#intText {
+				font-size: 100%;
+				font-family: Arial, Helvetica, sans-serif;
+				justify-content: left;
+			}
+
+		}
+
+		@media(max-width: 900px) {
+			#forthAngle {
+				opacity: 1;
+				width: 100%;
+				margin: 0;
+				transition: opacity 2s ease-in-out;
+				background-color: #6b6b6b;
+				transform: translateY(0);
+				margin-bottom: 4rem;
+			}
+
+			#forthAngle::before {
+				content: '';
+				position: absolute;
+				top: 0;
+				left: 0;
+				width: 100%;
+				height: 100%;
+				background-color: #6b6b6b;
+				transform: skewY(-2deg);
+				transform-origin: 0% 100%;
+				z-index: -1;
+			}
+
+			/* #forthAngle::after {
+			content: '';
+			position: absolute;
+			top: 0;
+			left: 0;
+			width: 100%;
+			height: 100%;
+			background-color: #6b6b6b;
+			transform: skewY(2deg);
+			transform-origin: 0% 100%;
+			z-index: -1;
+		} */
+
+			#connectImage {
+				width: 80%;
+				height: auto;
+				float: left;
+				padding-top: 0.5rem;
+				padding-left: 13%;
+			}
+
+			#connectHeading {
+				padding-top: 3rem;
+				margin-top: -1rem;
+				font-size: 150%;
+				font-family: Arial, Helvetica, sans-serif;
+				justify-content: left;
+			}
+
+			#connectText {
+				font-size: 100%;
+				padding-right: 2rem;
+				font-family: Arial, Helvetica, sans-serif;
+				justify-content: left;
+			}
+
+		}
+
+		@media(min-width: 900px) {
+			#forthAngle {
+				opacity: 1;
+				width: 100%;
+				transition: opacity 2s ease-in-out;
+				background-color: #6b6b6b;
+				transform: translateY(0);
+				margin-bottom: 4rem;
+				padding-bottom: 2rem;
+			}
+
+			#forthAngle::before {
+				content: '';
+				position: absolute;
+				top: 0;
+				left: 0;
+				width: 100%;
+				height: 100%;
+				background-color: #6b6b6b;
+				transform: skewY(-2deg);
+				transform-origin: 0% 100%;
+				z-index: -1;
+			}
+
+			/* #forthAngle::after {
+			content: '';
+			position: absolute;
+			top: 0;
+			left: 0;
+			width: 100%;
+			height: 100%;
+			background-color: #6b6b6b;
+			transform: skewY(2deg);
+			transform-origin: 0% 100%;
+			z-index: -1;
+		} */
+
+			#connectImage {
+				width: 80%;
+				height: auto;
+				float: left;
+				padding-top: 0.5rem;
+				padding-left: 13%;
+			}
+
+			#connectHeading {
+				padding-top: 1rem;
+				margin-top: -1rem;
+				font-size: 160%;
+				font-family: Arial, Helvetica, sans-serif;
+				justify-content: left;
+			}
+
+			#connectText {
+				font-size: 100%;
+				padding-right: 2rem;
+				font-family: Arial, Helvetica, sans-serif;
+				justify-content: left;
+			}
+
+		}
+
+		.paddingCard {
+			padding-bottom: 1.2rem;
+		}
+
+		#fullWidth {
+			width: 100%;
+			padding: 0;
+		}
+
+		.seasonHeading {
+			font-size: 180%;
+			text-align: center;
+			padding-top: 3rem;
+			font-family: Arial, Helvetica, sans-serif;
+		}
+
+		#gofundimg {
+			float: left;
+			padding-left: 5%;
+		}
+
+		#backimg {
+			float: left;
+			padding-left: 5%;
+			height: 7.5rem;
+		}
+
+		.campText {
+			float: left;
+			padding-left: 1rem;
+			padding-top: 6%;
+			font-size: 110%;
+		}
+
+		#heightChange {
+			height: 40%;
+			padding-bottom: 2rem;
+
+		}
+
+		.freightTroImg {
+			width: 85%;
+		}
+
+		.PowerTroImg {
+			width: 65%;
+		}
+
+		.PowerTroImg2 {
+			width: 100%;
+		}
+
+		.CenterTroImg {
+			width: 90%;
+		}
+
+		.CenterTroImg2 {
+			width: 80%;
+		}
+
+
+		.CenterTeamImg {
+			width: 100%;
+
+		}
+
+		.PowerTeamImg {
+			width: 100%;
+		}
+
+		#secondRow {
+			padding-top: 1rem;
+			padding-bottom: 1rem;
+		}
+
+		#paddingAfter {
+			padding-bottom: 2rem;
+		}
+
+		#paddingPart {
+			padding-top: 2rem;
+		}
+
+		#InfoSession {
+			background-color: #333;
+			border-style: solid;
+			border-radius: 3% / 20%;
+			border-color: rgb(90, 88, 88);
+		}
+
+		#infotext {
+			font-family: Arial, Helvetica, sans-serif;
+			font-weight: 600;
+			font-size: 2vw;
+			padding-left: 2vw;
+			padding-top: 0.6vw;
+			padding-bottom: 0.6vw;
+			margin: 0;
+		}
+
+		.buttonStyles {
+			background-color: #04AA6D;
+			border: none;
+			color: white;
+			height: 9vw;
+			padding: 2vw 2vw;
+			text-align: center;
+			font-family: Arial, Helvetica, sans-serif;
+			font-size: 1.8vw;
+			text-decoration: none;
+			display: inline-block;
+			border-radius: 1vw;
+			margin-left: 2vw;
+		}
+
+		@media(min-width: 900px) {
+			.buttonStyles {
+				background-color: #04AA6D;
+				border: none;
+				color: white;
+				padding: 2vw 2vw;
+				text-align: center;
+				font-family: Arial, Helvetica, sans-serif;
+				font-size: 1.8vw;
+				text-decoration: none;
+				display: inline-block;
+				border-radius: 1vw;
+				margin-left: 2vw;
+			}
+		}
+	</style>
+
+</head>
+
+<body>
+
+
+	<div id="topBar">
+
+		<img id="img" src="images/txpand_logo-removebg-preview.png">
+		<div id="heo">
+			<h1 id="h">Expanding STEM skills through robotics</h1>
+		</div>
+
+		<a href="#" class="Toggle" id="button">
+			<span class="bar"></span>
+			<span class="bar"></span>
+			<span class="bar"></span>
+		</a>
+
+		<div id="Test" class="test2">
+
+			<div class="topbar-section" id="homeTab">
+				<span class="tabs">Home</span>
+			</div>
+
+			<div class="topbar-section" id="aboutUsTab">
+				<span class="tabs">About us</span>
+			</div>
+
+			<div class="topbar-section" id="outreachTab">
+				<span class="tabs">Outreach</span>
+			</div>
+
+			<div class="topbar-section" id="pastRobotsTab">
+				<span class="tabs">Past Robots</span>
+			</div>
+
+			<div class="topbar-section" id="sponsorshipsTab">
+				<span class="tabs">Partnerships</span>
+			</div>
+
+			<div class="topbar-section" id="donationsTab" style="display:none;">
+				<span class="tabs">Donations</span>
+			</div>
+
+		</div>
+
+	</div>
+
+	<div id="Home" class="tabcontent">
+
+		<div class="jumbotron" id="homejumbo">
+			<p id="num" class="textShadow"> Texpand</p>
+		</div>
+
+		<div class="row" style="padding-bottom: 0; padding-top: 1vw;">
+			<div id="InfoSession" class="col-12 col-sm-12 col-md-12 col-xl-12"
+				style="height: 15vw; display: inline-flex; padding-top: 0.8vw;">
+				<img src="images/Ignite-logo-only.png" alt="" style="height: 13vw;">
+				<div>
+					<h1 id="infotext">For more info on the Ignite Robotics International initiative visit the links
+						below</h1>
+					<div style="display: inline-flex; padding-left: 2vw;">
+						<p style="width: 50%; font-size: 1.5vw;">This initiative is to expose more young South Africans
+							to
+							FTC and the
+							world of robotics as an amazing way to have fun and learn valuable STEM skills</p>
+						<button class="buttonStyles"
+							onclick="window.open('https://www.igniteroboticsinternational.org/events', '_blank')">Info
+							Session Sign up</button>
+						<button class="buttonStyles"
+							onclick="window.open('https://youtu.be/V2cJhmhxSt0?si=4flilZv7JUnMqMHx', '_blank')">Intro
+							Video</button>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<div class="row" id="homerow">
+
+			<div id="home_miss" class="col-12 col-sm-12 col-md-6 col-xl-6 Hcol home2">
+				<h1 id="" class="Tsizeb">Our Mission</h1>
+				<p class="Tsize">Our mission is to is grow and expand as people and as a team, while bringing others
+					along with us. We are passionate about being part of creating interest in STEM skills in South
+					Africa, and bringing opportunities and hope to students that don’t have easy access to FTC and
+					robotics opportunities.</p>
+				<img class="Mission_img" src="images/homepadgeone.png" alt="image of fattys drivetrain">
+				<img class="Mission_img" src="images/ICU.jpg" alt="Outreach to Silverlea">
+			</div>
+
+			<div class="col-12 col-sm-12 col-md-6 col-xl-6 Hcol home2">
+				<h5 id="glance">Our Team At A Glance</h5>
+				<div class="row">
+					<div class="col col-md-3 paddingCard">
+						<div class="card">
+							<img class="card_imgs" src="images/awards.png" class="card-img-top" alt="...">
+							<div class="card-body">
+								<h5 class="card-title">AWARDS WON</h5>
+								<p class="card-text">16</p>
+							</div>
+						</div>
+					</div>
+
+					<div class="col col-md-3 paddingCard">
+						<div class="card">
+							<img class="card_imgs" src="images/members.png" class="card-img-top" alt="...">
+							<div class="card-body">
+								<h5 class="card-title" id="smaller">TEAM MEMBERS</h5>
+								<p class="card-text">13</p>
+							</div>
+						</div>
+					</div>
+
+					<div class="col col-md-3 paddingCard">
+						<div class="card">
+							<img class="card_imgs" src="images/calender.png" class="card-img-top" alt="...">
+							<div class="card-body">
+								<h5 class="card-title">YEARS IN FIRST</h5>
+								<p class="card-text">4</p>
+							</div>
+						</div>
+					</div>
+
+					<div class="col col-md-3 paddingCard">
+						<div class="card">
+							<img class="card_imgs" src="images/support.png" class="card-img-top" alt="...">
+							<div class="card-body ">
+								<h5 class="card-title" id="smaller">TEAMS SUPPORTED</h5>
+								<p class="card-text">100+</p>
+							</div>
+						</div>
+					</div>
+
+				</div>
+
+			</div>
+		</div>
+
+		<div class="row footer">
+
+			<div class="col-md-3 col-sm-12">
+
+				<p>Contact Us</p>
+				<a href="https://www.instagram.com/team_texpand?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw=="
+					target="_blank"><img class="ContactUs" src="images/instagram.jpeg"></a>
+				<p class="contacttext">#team_texpand</p>
+				<img class="ContactUs" src="images/Gmail.png">
+				<p class="contacttext">teamtexpand@gmail.com</p>
+
+			</div>
+
+			<div class="col-md-6 col-sm-12">
+
+				<img class="HomeTexpandlogo" src="images/txpand_logo-removebg-preview.png">
+
+				<div class="HomeTeXpand">
+					<p>Expanding STEM skills through robotics</p>
+				</div>
+
+			</div>
+
+			<div class="col-md-3 col-sm-12">
+			</div>
+
+		</div>
+	</div>
+
+	<div id="Don" class="tabcontent" style="display:none;">
+		<div class="jumbotron" id="Donjumbo">
+			<h2 id="hea" class="s">Donations</h2>
+		</div>
+		<p id="don3">One of the main dissadvantages our team has is that we have to compete with teams from America that
+			have
+			budgets of over R200,000 or
+			roughly $11,400.
+			That is why we ask you to donate to us using the link below.</p>
+		<p id="don4"> the link below...</p>
+
+
+	</div>
+
+	<div id="Sponsor" class="tabcontent">
+
+		<div class="jumbotron" id="sponjumbo">
+			<h2 id="hea" class="textShadow">Partnerships</h2>
+		</div>
+
+
+		<div class="container-fluid" id="sponcon">
+
+			<!-- <div class="row">
+				<div class="col-12 col-sm-12 col-md-6 col-xl-6" id="heightChange">
+					<a href="https://gofund.me/c1dc51d5" target="_blank"><img id="gofundimg"
+							src="images/goFundMe logo.png" alt="">
+					</a>
+					<p class="campText">goFundMe campaign</p>
+				</div>
+				<div class="col-12 col-sm-12 col-md-6 col-xl-6" id="heightChange">
+					<a href="https://www.backabuddy.co.za/champion/project/texpand-ftc-5826906396642016318/"
+						target="_blank"><img id="backimg" src="images/BackaBuddy logo.png" alt=""></a>
+					<p class="campText">Back-a-buddy campaign</p>
+				</div>
+			</div> -->
+			<!-- 
+			<div class="row RowVid2" id="morepadding">
+				<div class="col-12 col-sm-12 col-md-12 col-xl-12 imags34">
+					<div class="container-fluid">
+						<p id="textlead24">
+							Our current sponsors that have helped us get this far include
+						</p>
+					</div>
+				</div>
+			</div>
+
+			<div class="row Rowtest">
+
+				<div class="col-12 col-sm-12 col-md-4 col-xl-4 imags3 height">
+					<div class="container-fluid margin1 height2">
+						<p id="textspon">Lead sponsor</p>
+					</div>
+				</div>
+
+				<div class="col-12 col-sm-12 col-md-4 col-xl-4 imags3 height">
+					<div class="container-fluid margin1 height2" id="paddingb">
+						<p id="textspon">Gold sponsors</p>
+					</div>
+				</div>
+
+				<div class="col-12 col-sm-12 col-md-4 col-xl-4 imags3 height">
+					<div class="container-fluid margin1 height2" id="paddingb">
+						<p id="textspon">Silver sponsors</p>
+						<img id="FSILogo" src="images/FSI logo.jpg" alt="">
+					</div>
+				</div>
+
+			</div> -->
+
+
+			<div class="row RowVid2" id="paddingfooter">
+
+				<div class="container-fluid margin1 height2">
+					<div class="row" id="paddingPart">
+
+						<div class="col-6 col-sm-6 col-md-3 col-xl-2 imags4">
+							<img class="sponsors3" src="images/hg-molenaar-logo (1).png">
+						</div>
+
+						<div class="col-6 col-sm-6 col-md-3 col-xl-2 imags4">
+							<img class="sponsors5" src="images/Robot handling.png">
+						</div>
+
+						<div class="col-6 col-sm-6 col-md-3 col-xl-2 imags4">
+							<img class="sponsors6" src="images/WhatsApp Image 2023-01-30 at 09.08.46.jpeg">
+						</div>
+
+						<div class="col-6 col-sm-6 col-md-3 col-xl-2 imags4">
+							<img class="sponsors7" src="images/Slide2 (1).JPG">
+						</div>
+
+						<div class="col-6 col-sm-6 col-md-3 col-xl-2 imags4">
+							<img class="sponsors8" src="images/Personal Actuary Logo.jpg">
+						</div>
+
+						<div class="col-6 col-sm-6 col-md-3 col-xl-2 imags4">
+							<img class="sponsors7" src="images/rockwell logo.png">
+						</div>
+
+					</div>
+				</div>
+			</div>
+
+			<!-- <div class="row">
+				<h6 id="sponsorhshipre">Sponsorships tiers for the 2023-2024 centerstage season</h6>
+			</div>
+
+			<div class="row">
+				<div class="col-12 col-sm-12 col-md-12 col-xl-12">
+					<img id="sponsorSlide" src="images/0221.png" alt="">
+				</div>
+			</div> -->
+
+		</div>
+
+		<div class="row footer">
+
+			<div class="col-md-3 col-sm-12">
+				<p>Contact Us</p>
+				<a href="https://www.instagram.com/team_texpand?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw=="
+					target="_blank"><img class="ContactUs" src="images/instagram.jpeg"></a>
+				<p class="contacttext">#team_texpand</p>
+				<img class="ContactUs" src="images/Gmail.png">
+				<p class="contacttext">teamtexpand@gmail.com</p>
+
+			</div>
+
+			<div class="col-md-6 col-sm-12">
+
+				<img class="HomeTexpandlogo" src="images/txpand_logo-removebg-preview.png">
+
+				<div class="HomeTeXpand">
+					<p>Expanding STEM skills through robotics</p>
+				</div>
+
+			</div>
+
+			<div class="col-md-3 col-sm-12">
+			</div>
+
+		</div>
+	</div>
+
+	<div id="Sponsor_Backup2" class="tabcontent">
+		<div class="jumbotron" id="sponjumbo">
+			<h2 id="hea" class="textShadow">Sponsorships</h2>
+		</div>
+
+		<div class="container-fluid" id="sponcon">
+
+			<div class="row">
+				<h6 id="sponsorhshipre">Sponsorships needs for the 2023-2024 season</h6>
+			</div>
+
+			<div class="row Rowtest">
+
+				<div class="col-12 col-sm-12 col-md-4 col-xl-4 imags3 height">
+					<div class="container-fluid margin1 height2">
+						<img id="fllimg" src="images/IMG_20230819_094940.jpg" alt="FLL logo">
+						<p id="textspon">Parts and Outreach expenses needed for the start of the season</p>
+						<p class="price">R35 000</p>
+						<p id="textspon" class="mottext">This sponsorship will go to funding our preseason outreaches
+							which includes demonstraions to new FTC teams, demonstraions at schools that possibly want
+							to start a FIRST team but want more infomation, Robotics activation workshops and coaching
+							sessions for existing teams. This also covers the initial season parts for our robot and the
+							cost of buying the new game field.
+						</p>
+					</div>
+
+				</div>
+
+				<div class="col-12 col-sm-12 col-md-4 col-xl-4 imags3 height">
+					<div class="container-fluid margin1 height2" id="paddingb">
+						<img id="buffimg" src="images/20230421_115147.jpg" alt="FLL logo">
+						<p id="textspon">Outreach and pit expenses for the second half of the season</p>
+						<p class="price">R22 000</p>
+						<p id="textspon">These funds will go more coaching workshops for FTC teams in the build season
+							as well as more Robotics activation workshops that we might run at some township schools.
+							This will also cover our pit area at nationals with displays of what
+							we have done in the season including Robot design process, Outreach, Sponsors, Connect award
+							outreachs and some fun extra stuff about our team. Then if we qualify for Worlds we will
+							reuse there</p>
+					</div>
+				</div>
+
+				<div class="col-12 col-sm-12 col-md-4 col-xl-4 imags3 height">
+					<div class="container-fluid margin1 height2" id="paddingb">
+						<img id="buffimg" src="images/download.jpeg" alt="">
+						<p id="textspon">Stuff that would be nice to have but isn't necessary</p>
+						<p class="price">R35 000</p>
+						<p id="textspon" class="mottext2">This is for new robot parts and equipment that would be really
+							nice to have and help us take our robot to the next level but we don't need it the compete.
+							This would cover better servos from Axon, and spare control hub for prototyping and having a
+							spare is good because our one was acting up last year it will also get us motors that are
+							faster so our subsystems will be faster resulting in a better robot</p>
+					</div>
+				</div>
+
+			</div>
+
+			<div class="row RowVid2">
+				<div class="col-12 col-sm-12 col-md-6 col-xl-6 imags34">
+					<div class="container-fluid margin1" id="paddingb">
+						<p id="textspon34">Worlds Travel and entrance fee</p>
+						<p class="price2">R370 000</p>
+						<p id="textspon" class="mottext2">If we qualify for worlds we will need funds to cover our
+							travel expenses and entrance fee</p>
+					</div>
+				</div>
+
+				<div class="col-12 col-sm-12 col-md-6 col-xl-6 imags34">
+					<img id="sponsorshipneedsfirst" src="images/Worlds size.jpg" alt="">
+				</div>
+
+			</div>
+
+
+			<div class="row RowVid2" id="morepadding">
+				<div class="col-12 col-sm-12 col-md-12 col-xl-12 imags34">
+					<div class="container-fluid">
+						<p id="textlead24">
+							Our current sponsors that have helped us get this far include
+						</p>
+					</div>
+				</div>
+			</div>
+
+			<div class="row RowVid2" id="paddingfooter">
+
+				<div class="col-12 col-sm-6 col-md-6 col-xl-3 imags4">
+					<img class="sponsors2" src="images/3D house.jpg">
+				</div>
+
+				<div class="col-12 col-sm-6 col-md-6 col-xl-3 imags4">
+					<img class="sponsors3" src="images/hg-molenaar-logo (1).png">
+				</div>
+
+				<div class="col-12 col-sm-6 col-md-6 col-xl-3 imags4">
+					<img class="sponsors4" src="images/Red Village.png">
+				</div>
+
+				<div class="col-12 col-sm-6 col-md-6 col-xl-3 imags4">
+					<img class="sponsors5" src="images/Robot handling.png">
+				</div>
+
+				<div class="col-12 col-sm-6 col-md-6 col-xl-3 imags4">
+					<img class="sponsors6" src="images/WhatsApp Image 2023-01-30 at 09.08.46.jpeg">
+				</div>
+
+				<div class="col-12 col-sm-6 col-md-6 col-xl-3 imags4">
+					<img class="sponsors7" src="images/Slide2 (1).JPG">
+				</div>
+
+				<div class="col-12 col-sm-6 col-md-6 col-xl-3 imags4">
+					<img class="sponsors8" src="images/Personal Actuary Logo.jpg">
+				</div>
+
+				<div class="col-12 col-sm-6 col-md-6 col-xl-3 imags4">
+					<img class="sponsors9" src="images/FSI logo.jpg">
+				</div>
+
+				<div class="col-12 col-sm-6 col-md-6 col-xl-3 imags4">
+					<img class="sponsors7" src="images/2020 spitfire logo small-1.webp">
+				</div>
+
+				<div class="col-12 col-sm-6 col-md-6 col-xl-3 imags4">
+					<img class="sponsors8" src="images/rockwell.png">
+				</div>
+
+			</div>
+
+		</div>
+
+		<div class="row footer">
+
+			<div class="col-md-3 col-sm-12">
+				<p>Contact Us</p>
+				<a href="https://www.instagram.com/team_texpand?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw=="
+					target="_blank"><img class="ContactUs" src="images/instagram.jpeg"></a>
+				<p class="contacttext">#team_texpand_ftc</p>
+				<img class="ContactUs" src="images/Gmail.png">
+				<p class="contacttext">teamtexpand@gmail.com</p>
+
+			</div>
+
+			<div class="col-md-6 col-sm-12">
+
+				<img class="HomeTexpandlogo" src="images/txpand_logo-removebg-preview.png">
+
+				<div class="HomeTeXpand">
+					<p>Expanding STEM skills through robotics</p>
+				</div>
+
+			</div>
+
+			<div class="col-md-3 col-sm-12">
+			</div>
+
+		</div>
+	</div>
+
+	<div id="Sponsor_Backup" class="tabcontent">
+
+		<div class="jumbotron" id="sponjumbo">
+			<h2 id="hea" class="textShadow">Sponsorship</h2>
+		</div>
+
+		<div class="container-fluid">
+
+
+			<div class="row RowVid">
+				<div class="col-12 col-sm-6 col-md-6 col-xl-6 imags43">
+					<p id="textf">Our full budget for the entire team of 9 members and 2 coaches to travel is around
+						R389 000 (US$20 000). Thanks to some generous sponsors we have reached our initial target of
+						R100 000 (US$ 5 500) that we needed to raise to enable our minimum required team to compete. So
+						we are sending a team!</p>
+				</div>
+
+				<div class="col-12 col-sm-6 col-md-6 col-xl-6 imags6">
+					<Iframe width="100%" height="100%" src="https://www.youtube.com/embed/GtGLd1vZ0ho"></Iframe>
+				</div>
+
+			</div>
+
+			<div class="row RowVid">
+				<div class="col-12 col-sm-6 col-md-6 col-xl-6 imags43">
+					<img id="sponsorshipneeds" src="images/New Needs.jpg" alt="">
+				</div>
+
+				<div class="col-12 col-sm-6 col-md-6 col-xl-6 imags43">
+					<p id="textf2"> However, our weak currency means that some of the rest of the families are finding
+						it difficult to raise the funds needed for flights and accomodation, so we are continuing to
+						look for sponsorhship that will subsidise costs, enabling the rest of the team to make the trip
+						to the World Championship too.
+					</p>
+				</div>
+			</div>
+
+			<div class="row RowVid2">
+				<div class="col-12 col-sm-12 col-md-12 col-xl-12 imags43">
+					<p id="textspon">And here is where you can help that dream become a reality. We need businesses and
+						individuals to partner with us in raising the necessary funds for Team Texpand to get to Texas,
+						and we only have until the 24th March to decide if we have enough to register for the
+						Championship or pull out. Considering the travel and accommodation expenses, we need to raise
+						R35 000 per person. Please would you consider being part of our adventure and part of our
+						mission to expand STEM skills in South Africa through robotics. To help make contributing as
+						easy as possible, we have opened up a number of channels for you to make contributions. You can:
+					</p>
+				</div>
+
+			</div>
+
+			<div class="row RowVid23">
+
+				<div class="col-12 col-sm-12 col-md-4 col-xl-4 imags34">
+					<div class="container-fluid margin1">
+						<p id="textspon">Pay directly into our Texapnd bank account. Texpand is a registered
+							non-profit
+							company.</p>
+						<img id="sponsorshipneeds23" src="images/txpand_logo-removebg-preview.png" alt="">
+						<p id="textsponsor">Bank name: Standard Bank</p>
+						<p id="textsponsor">Branch name: PINELANDS</p>
+						<p id="textsponsor">Branch code: 6309</p>
+						<p id="textsponsor">Account holder: TEXPAND NPC</p>
+						<p id="textsponsor">Account number: 10 18 405 556 1</p>
+						<p id="textsponsor">Account type: CURRENT</p>
+						<p id="textspon">Please use your name as a reference, unless you wish to remain anonymous.
+						</p>
+					</div>
+
+				</div>
+
+				<div class="col-12 col-sm-12 col-md-4 col-xl-4 imags34">
+					<div class="container-fluid margin1" id="paddingb">
+						<p id="textspon">Make easy online payments by clicking through to our Back-a-buddy campaign.
+						</p>
+						<a href="https://www.backabuddy.co.za/team-texpand-ftc-5538147887273450175" target="_blank"><img
+								id="sponsorshipneeds23" src="images/BackaBuddy logo.png" alt=""></a>
+						<p id="textspon">Click here to visit our campaign page.</p>
+					</div>
+				</div>
+
+				<div class="col-12 col-sm-12 col-md-4 col-xl-4 imags34">
+					<div class="container-fluid margin1" id="paddingb2">
+						<p id="textspon">Receive, in South Africa, an 18A tax certificate for contributions by
+							making
+							payment to FIRST SA - a PBO who runs FTC and will pass all funds on to us.</p>
+						<img id="sponsorshipneedsfirst" src="images/First logo.png" alt="">
+						<p id="textspon te">
+							Please email teamtexpand@gmail.com to set this option up.</p>
+					</div>
+				</div>
+
+			</div>
+
+			<div class="row RowVid2">
+				<div class="col-12 col-sm-12 col-md-12 col-xl-12 imags43">
+					<p id="textspon">For corporate sponsors we are offering tiered sponsorship benefits according to
+						your level of contribution.
+					</p>
+				</div>
+
+			</div>
+
+			<div class="row RowVid23">
+
+				<div class="col-12 col-sm-12 col-md-12 col-xl-12 imags34">
+					<img id="sponsorshipneedsfirst2" src="images/Tiers.JPG" alt="">
+				</div>
+
+			</div>
+
+
+			<div class="row RowVid2">
+				<div class="col-12 col-sm-12 col-md-12 col-xl-12 imags34">
+					<div class="container-fluid">
+						<p id="textlead24">
+							Our current sponsors that have helped us get this far include
+						</p>
+					</div>
+				</div>
+			</div>
+
+			<div class="row RowVid2">
+
+				<div class="col-12 col-sm-6 col-md-6 col-xl-3 imags4">
+					<img class="sponsors1" src="images/gobuilda_logo.png">
+				</div>
+
+				<div class="col-12 col-sm-6 col-md-6 col-xl-3 imags4">
+					<img class="sponsors2" src="images/3D house.jpg">
+				</div>
+
+				<div class="col-12 col-sm-6 col-md-6 col-xl-3 imags4">
+					<img class="sponsors3" src="images/hg-molenaar-logo (1).png">
+				</div>
+
+				<div class="col-12 col-sm-6 col-md-6 col-xl-3 imags4">
+					<img class="sponsors4" src="images/Red Village.png">
+				</div>
+
+				<div class="col-12 col-sm-6 col-md-6 col-xl-3 imags4">
+					<img class="sponsors5" src="images/Robot handling.png">
+				</div>
+
+				<div class="col-12 col-sm-6 col-md-6 col-xl-3 imags4">
+					<img class="sponsors6" src="images/WhatsApp Image 2023-01-30 at 09.08.46.jpeg">
+				</div>
+
+				<div class="col-12 col-sm-6 col-md-6 col-xl-3 imags4">
+					<img class="sponsors7" src="images/Slide2 (1).JPG">
+				</div>
+
+				<div class="col-12 col-sm-6 col-md-6 col-xl-3 imags4">
+					<img class="sponsors8" src="images/Personal Actuary Logo.jpg">
+				</div>
+
+			</div>
+
+		</div>
+
+		<img class="HomeTexpandlogo" src="images/txpand_logo-removebg-preview.png">
+
+		<div class="HomeTeXpand">
+			<p>Expanding STEM skills through robotics</p>
+		</div>
+	</div>
+
+	<div id="Outreach" class="tabcontent">
+
+		<div class="jumbotron" id="outjumbo">
+			<h2 id="hea" class="textShadow">Outreach</h2>
+		</div>
+
+		<div class="row" id="firstAngle">
+			<div class="col-12 col-sm-12 col-md-7 col-xl-7">
+				<h5 id="expandHeading">Expanding STEM Skills through Robotics</h5>
+				<p id="expandText"> As a team, we’ve realised that robotics coaching is inaccessible and unaffordable to
+					most South Africans. Our team works to provide learning opportunities and teach disadvantaged
+					students who would not otherwise have a chance to engage with technology. Through our efforts we
+					hope to improve the future of South Africa’s youth and repair the massive lack of STEM skills and
+					awareness in South Africa.</p>
+			</div>
+			<div class="col-12 col-sm-12 col-md-5 col-xl-5">
+				<img id="expandImage" src="images/IMG_20230901_120610.jpg" alt="image of fattys drivetrain">
+			</div>
+		</div>
+
+		<div class="row" id="secondAngle">
+			<div class="col-12 col-sm-12 col-md-5 col-xl-5">
+				<img id="FLLImage" src="images/Our_Mission.jpeg" alt="image of fattys drivetrain">
+			</div>
+			<div class="col-12 col-sm-12 col-md-7 col-xl-7">
+				<h5 id="FLLHeading">Our outreach programs</h5>
+				<p id="FLLText"> We train students in several different ways. We have offered personalised robotics
+					coaching sessions to several South African FTC and FLL (FIRST Lego League) teams, as well as
+					international teams. We developed a robotics activation course which teaches the basics of
+					mechanics, coding, and 3D printing/CAD (computer aided design) with hands-on lessons that allow deep
+					learning to take place. It’s been adapted for pre-K, primary, and high school, and has been used to
+					introduce roughly 500 students to robotics.
+				</p>
+			</div>
+
+		</div>
+
+		<div class="row" id="thirdAngle">
+			<div class="col-12 col-sm-12 col-md-7 col-xl-7">
+				<h5 id="intHeading">Connecting with the wider FIRST community</h5>
+				<p id="intText"> Because we have learnt so much from the generosity of the FIRST community, our team
+					aims to give back by helping other FIRST teams. We have assisted or mentored over 100 FTC teams, and
+					are always willing to help teams on the FTC discord, which has over 20 000 members.
+				</p>
+			</div>
+			<div class="col-12 col-sm-12 col-md-5 col-xl-5 center">
+				<img id="intImage" src="images/Screenshot (101).png" alt="image of fattys drivetrain">
+			</div>
+		</div>
+
+		<div class="row" id="forthAngle">
+			<div class="col-12 col-sm-12 col-md-5 col-xl-5 center">
+				<img id="connectImage" src="images/20231117_145331.jpg" alt="image of fattys drivetrain">
+			</div>
+			<div class="col-12 col-sm-12 col-md-7 col-xl-7">
+				<h5 id="connectHeading">Connecting with Industry Experts</h5>
+				<p id="connectText"> Our team seeks regular engineering input from STEM professionals during our
+					build-season. We aim to foster relationships with businesses, and not only learn from them, but also
+					collaborate with them on our various outreach projects.</p>
+			</div>
+		</div>
+
+
+
+
+		<div class="row footer">
+
+			<div class="col-md-3 col-sm-12">
+				<p>Contact Us</p>
+				<a href="https://www.instagram.com/team_texpand?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw=="
+					target="_blank"><img class="ContactUs" src="images/instagram.jpeg"></a>
+				<p class="contacttext">#team_texpand_ftc</p>
+				<img class="ContactUs" src="images/Gmail.png">
+				<p class="contacttext">teamtexpand@gmail.com</p>
+
+			</div>
+
+			<div class="col-md-6 col-sm-12">
+
+				<img class="HomeTexpandlogo" src="images/txpand_logo-removebg-preview.png">
+
+				<div class="HomeTeXpand">
+					<p>Expanding STEM skills through robotics</p>
+				</div>
+
+			</div>
+
+			<div class="col-md-3 col-sm-12">
+			</div>
+
+		</div>
+
+	</div>
+
+	<div id="aboutUs" class="tabcontent">
+
+		<div class="jumbotron" id="usjumbo">
+			<h2 id="hea" class="textShadow">About Us </h2>
+		</div>
+
+		<div class="row" id="homerow">
+
+			<div class="col-12 col-sm-12 col-md-12 col-xl-12 us_clou">
+				<h1 class="Tsizeb">Who are we</h1>
+				<p class="Tsize">We are Texpand, a FIRST Tech Challenge (FTC) team from Cape Town, South Africa. We are
+					based in Pinelands, but we have members from as far as Robertson, Simon’s Town, and Mitchells Plain.
+					Our members are aged 12 - 17, and each have between 1 and 5 years of FTC experience. Our team has no
+					technical coaches and is not run by any school or organisation. As a result we have learned all we
+					know from online resources, other FIRST teams, and seeking input from industry professionals. We aim
+					to pass our skills on to other teams who are starting out or looking to improve, and to students
+					with little access to technical learning opportunities.
+				</p>
+				<img class="Us_imgs" src="images/IMG20240127082427.jpg" alt="image of fattys drivetrain">
+				<img class="Us_imgs" src="images/Da_Dudes.jpeg" alt="image of fattys drivetrain">
+				<img class="Us_imgs" src="images/Texpand Drive team- Ethan, Ben, Matthew.JPG"
+					alt="Image of competition day">
+				<img class="Us_imgs" src="images/IMG_5896.JPG" alt="image of fattys drivetrain">
+			</div>
+
+		</div>
+
+		<h5 id="space">History and Achievements</h5>
+
+		<div class="row USA">
+			<div class="col-12 col-sm-12 col-md-12 col-xl-12 USAcol uscol">
+				<h1>2024 - CenterStage</h1>
+				<div class="row" id="paddingAfter">
+					<div class="col-12 col-sm-12 col-md-6 col-xl-6 uscoltest">
+						<p class="text">We brought back what we had learned from our experience at the World
+							Championship, and once again massively improved our game in all aspects. We ran a rookie
+							boot camp and recruited 7 new members, which we trained throughout the season. We made even
+							more connections with the STEM and FIRST communities, and implemented highly advanced
+							mechanical and software systems. Our outreach expanded greatly, and throughout the season we
+							introduced roughly 500 students from disadvantaged communities to robotics and technology.
+							We won the robot game and Inspire award at the regional and national competitions, and once
+							again qualified for the World Championship.
+						</p>
+					</div>
+					<div class="col-12 col-sm-12 col-md-6 col-xl-6 uscoltest">
+						<img class="CenterTeamImg" src="images/IMG-20240423-WA0015 (1).jpg" alt="Awards from PowerPlay">
+					</div>
+				</div>
+				<div class="row" id="paddingAfter">
+					<div class="col-12 col-sm-12 col-md-3 col-xl-3 uscoltest">
+						<img class="CenterTroImg" src="images/SGCAM_20240420_182735243.jpg" alt="Awards from PowerPlay">
+					</div>
+					<div class="col-12 col-sm-12 col-md-6 col-xl-6 uscoltest">
+						<p class="text">At the World Championship, we were much more prepared than in the previous
+							season and managed to efficiently organise our time and go to site visits at engineering
+							companies in Houston and build more meaningful connections with other FTC teams. The 4 day
+							long competition was an exhilarating experience, and in the end we brought home the Control
+							award for our division — which is awarded for coding and software excellence — and were
+							apart of
+							the winning alliance, making us the 2024 CENTERSTAGE World Champions alongside our alliance
+							partners,
+							AiCitizens from Romania and The Clueless from San Diego.
+						</p>
+					</div>
+					<div class="col-12 col-sm-12 col-md-3 col-xl-3 uscoltest">
+						<img class="CenterTroImg2" src="images/SGCAM_20240420_182723247.jpg"
+							alt="Awards from PowerPlay">
+					</div>
+				</div>
+			</div>
+
+		</div>
+
+		<div class="row USA">
+			<div class="col-12 col-sm-12 col-md-12 col-xl-12 USAcol uscol">
+				<h1>2023 - PowerPlay</h1>
+				<div class="row" id="paddingAfter">
+					<div class="col-12 col-sm-12 col-md-6 col-xl-6 uscoltest">
+						<img class="PowerTeamImg" src="images/New_Team_Pic_2.jpg" alt="Awards from PowerPlay">
+					</div>
+					<div class="col-12 col-sm-12 col-md-6 col-xl-6 uscoltest">
+						<p class="text">We learned exponentially in the off-season before Power Play, and during the
+							season. We expanded our competition beyond robot building and programming alone. We trained
+							‘apprentices’ for the first time, who then joined the team, and we worked on new ventures
+							such as reaching out to professionals in STEM for engineering input and sponsorship for
+							better parts. We also started a website, social media campaign, and began our outreaches to
+							disadvantaged students. We connected with the wider FIRST community, receiving mentorship
+							from many excellent teams such as Wolfpack Machina from the USA, who went on to win the
+							Inspire Award at the World Championship.
+						</p>
+					</div>
+				</div>
+				<div class="row" id="paddingAfter">
+					<div class="col-12 col-sm-12 col-md-6 col-xl-6 uscoltest">
+						<p class="text">At the regional and national competitions, we won the robot game, as well as the
+							Inspire Award — the top award, which recognises excellence in all fields of the FTC
+							competition. As a result, we were invited to the World Championship in Houston, Texas, where
+							we had an incredible time connecting with international teams, and learned even more. In our
+							division, we placed 22nd out of 47 teams (there were 192 teams randomly divided into 4
+							divisions), and won the 1st place Think award.
+						</p>
+					</div>
+					<div class="col-12 col-sm-12 col-md-3 col-xl-3 uscoltest">
+						<img class="PowerTroImg" src="images/Think .jpg" alt="Awards from PowerPlay">
+					</div>
+					<div class="col-12 col-sm-12 col-md-3 col-xl-3 uscoltest">
+						<img class="PowerTroImg2" src="images/20221103_105336.jpg" alt="Awards from PowerPlay">
+					</div>
+				</div>
+			</div>
+
+		</div>
+
+		<div class="row USA">
+			<div class="col-12 col-sm-12 col-md-12 col-xl-12 USAcol uscol">
+				<h1>2022 - Freight Frenzy</h1>
+				<div class="row" id="secondRow">
+					<div class="col-12 col-sm-12 col-md-4 col-xl-4">
+						<p class="text" id="leftMove"> We improved our game even further in Freight Frenzy. We recruited
+							new
+							members, and were
+							the only SA team during the season to use Java programming instead of blocks. Once again, we
+							won
+							the
+							national competition with a solo score of 108 points and the Innovate Award.
+						</p>
+					</div>
+					<div class="col-12 col-sm-12 col-md-4 col-xl-4">
+						<img class="freightTroImg" src="images/20221103_105336.jpg" alt="Awards from Freight Frenzy">
+					</div>
+					<div class="col-12 col-sm-12 col-md-4 col-xl-4">
+						<img class="freightTroImg" src="images/IMG_20220709_091801.jpg"
+							alt="Awards from Freight Frenzy">
+					</div>
+				</div>
+
+
+			</div>
+		</div>
+
+		<div class="row USA" id="centerUG">
+			<div class="col-12 col-sm-12 col-md-12 col-xl-12 USAcol uscol">
+				<h1>2021 - Ultimate Goal - Rookie Season</h1>
+				<p class="textforT">
+					Ultimate Goal was our rookie season. We started with only a sponsored REV Robotics starter kit, and
+					were a team of 6 friends, all with little to no previous experience in robotics. Despite our
+					inexperience and various struggles caused by lack of resources and the COVID-19 pandemic, we worked
+					hard and set ourselves on a steep learning curve, ultimately allowing us to win the South African
+					nationals with a solo score of 89 points as well as being awarded the Innovate Award.
+				</p>
+			</div>
+		</div>
+
+		<div class="row footer">
+
+			<div class="col-md-3 col-sm-12">
+				<p>Contact Us</p>
+				<a href="https://www.instagram.com/team_texpand?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw=="
+					target="_blank"><img class="ContactUs" src="images/instagram.jpeg"></a>
+				<p class="contacttext">#team_texpand</p>
+				<img class="ContactUs" src="images/Gmail.png">
+				<p class="contacttext">teamtexpand@gmail.com</p>
+
+			</div>
+
+			<div class="col-md-6 col-sm-12">
+
+				<img class="HomeTexpandlogo" src="images/txpand_logo-removebg-preview.png">
+
+				<div class="HomeTeXpand">
+					<p>Expanding STEM skills through robotics</p>
+				</div>
+
+			</div>
+
+			<div class="col-md-3 col-sm-12">
+			</div>
+
+		</div>
+
+	</div>
+
+	<div id="PBots" class="tabcontent">
+
+		<div class="jumbotron" id="pastjumbo">
+			<h2 id="hea" class="textShadow"> Past Robots</h2>
+		</div>
+
+		<div id="PastBots">
+
+			<div class="row" id="Maxvid">
+				<H6 class="seasonHeading">CENTERSTAGE 2023-2024 season</H6>
+				<p id="headingMax" class="col-12 col-sm-6 col-md-6 col-xl-6 ">We reused much of our kit for Center
+					Stage, but also added to it. Once again, we used a modified strafer chassis, but added GoBilda
+					odometry for more accurate field localisation. We had an active intake with spinning tubes directly
+					into our double gripper, which had forming bars at the back to correctly orient pixels. We used
+					viper slides for vertical delivery, along with an impressive 7 axis arm that we programmed using
+					inverse kinematics. Our programming of our arm and custom odometry localisation code won us
+					the Control award at Worlds, and we also won the overall robot game — making us World Champions
+					alongside our alliance partners.
+				</p>
+
+				<div class="col-12 col-sm-6 col-md-6 col-xl-6" id="videomax">
+					<Iframe id="videobuff" width="450rem" height="250rem"
+						src="https://www.youtube.com/embed/Ua2g17T63EU?si=iUOFrl2uOyxUFuRx"></Iframe>
+					<p>Also see Behind the Bot <a href="https://www.youtube.com/watch?v=edE9Cp5Gcac&t=137s"
+							target="_blank" style="color: white">here</a></p>
+				</div>
+
+			</div>
+
+			<div class="row" id="buffvid">
+				<H6 class="seasonHeading">PowerPlay 2022-2023 season</H6>
+				<h3 id="headingbuff" class="col-12 col-sm-6 col-md-6 col-xl-6 ">Our 2022-2023 PowerPlay, award winning
+					robot, was called "Buff". The descriptions of
+					“Buff's” subsystems are below. Also see our robot reveal for "Buff" on the left
+				</h3>
+
+				<div class="col-12 col-sm-6 col-md-6 col-xl-6" id="videobuff">
+					<Iframe id="videobuff" width="450rem" height="250rem"
+						src="https://www.youtube.com/embed/_B_p0qiay60"></Iframe>
+				</div>
+
+			</div>
+
+			<div class="container-fluid">
+				<div class="row">
+					<div class="col-12 col-sm-6 col-md-6 col-xl-3 colt" id="drive2">
+						<h4 id="drive2" class="sub">Drivetrain</h4>
+						<p>Our drivetrain was a modified gobuilda strafer chassis, we got shorter U channel to make the
+							drivetrain narrower for better maneuverability on the field
+						</p>
+					</div>
+					<div class="col-12 col-sm-6 col-md-6 col-xl-3 imags">
+						<img id="driv" class="buffimgs" src="images/Buff_Drive.jpg" alt="image of fattys drivetrain">
+					</div>
+
+					<div class="col-12 col-sm-6 col-md-6 col-xl-3 colt" id="collect2">
+						<h4 id="collect2" class="sub">Grippers</h4>
+						<p class="bufftext">For our grippers or way of grabing the cone we used 3D printed arms with
+							gear teeth on the
+							end so that we could use only one servo for each gripper. We have two grippers on the robot
+							on for collection and on for delivery
+						</p>
+					</div>
+					<div class="col-12 col-sm-6 col-md-6 col-xl-3 imags">
+						<img id="cooll1" class="halfimg" src="images/Top_Gripper.jpg" alt="image of fattys drivetrain">
+						<img id="cooll1" class="halfimg" src="images/Base_Gripper.jpg" alt="image of fattys drivetrain">
+					</div>
+
+					<div class="col-12 col-sm-6 col-md-6 col-xl-3 colt" id="slide">
+						<h4 id="linear" class="sub">Delivery slides</h4>
+						<p class="bufftext">Our delivery slides were four stage viper slides, we got viper slides when
+							our draw slides
+							were being way to unreliable. The down side of four stage viper slides is they are very
+							heavy, so in hind sight we should have only used two stage
+						</p>
+					</div>
+					<div class="col-12 col-sm-6 col-md-6 col-xl-3 imags">
+						<img id="slid" class="buffimgs" src="images/Delivery_Slides.jpg"
+							alt="image of fattys drivetrain">
+					</div>
+
+					<div class="col-12 col-sm-6 col-md-6 col-xl-3 colt" id="carou">
+						<h4 id="caro" class="sub">Collection slides</h4>
+						<p class="bufftext">For our horizontal collection slides we have modified 50cm draw slides so
+							that we got maximum
+							extension while still fitting in the size constraints. The destacker and base gripper were
+							mounted on top of these slides to extend with the slides to collect the cones.
+						</p>
+					</div>
+					<div class="col-12 col-sm-6 col-md-6 col-xl-3 imags">
+						<img id="carsel" class="buffimgs" src="images/Collection_slides.jpg"
+							alt="image of fattys drivetrain">
+					</div>
+
+					<div class="col-12 col-sm-6 col-md-6 col-xl-3 colt" id="Box">
+						<h4 id="box" class="sub">Destacker</h4>
+						<p class="bufftext">Our "Destacker" is a virtual four bar using custom 3D printed sprockets and
+							brackets for
+							attaching to the draw slides. This subsystem took the most time and iterations to get
+							reliable and doing exactly what we needed it to do. Our "nest" for cone transfer is also
+							mounted inside the destacker
+						</p>
+					</div>
+					<div class="col-12 col-sm-6 col-md-6 col-xl-3 imags">
+						<img id="box1" class="buffimgs" src="images/Destacker.jpg" alt="image of fattys drivetrain">
+					</div>
+
+					<div class="col-12 col-sm-6 col-md-6 col-xl-3 colt" id="design2">
+						<h4 id="astitics2" class="sub">Design</h4>
+						<p>We CAD designed some side panels for the robot to inprove Buff's "Swag" factor, HG molenaar
+							kindly lazer cut them out of stainless steel for a very cool end product
+						</p>
+					</div>
+					<div class="col-12 col-sm-6 col-md-6 col-xl-3 imags">
+						<img id="desi2" class="buffimgs" src="images/Side_Panels .jpg" alt="image of fattys drivetrain">
+					</div>
+
+				</div>
+			</div>
+
+			<H6 class="seasonHeading">Freight Frenzy 2021-2022 season</H6>
+			<h3 id="heading">Our 2021-2022 Freight Frenzy, award winning robot, was called "Skinny". The descriptions of
+				“Skinny’s” subsystems are below:
+			</h3>
+
+			<div class="container-fluid" id="paddingfooter">
+				<div class="row">
+					<div class="col-12 col-sm-6 col-md-6 col-xl-3 colt" id="drive2">
+						<h4 id="drive2" class="sub">Drivetrain</h4>
+						<p class="skinnytext">Our drivetrain used mecanum wheels, mounted in-between two lengths of
+							C-channel, powered by
+							two different types of Rev motors and connected and braced with extrusion.
+						</p>
+					</div>
+					<div class="col-12 col-sm-6 col-md-6 col-xl-3 imags">
+						<img id="driv" class="buffimgs" src="images/Skinny_Drivetrain.jpeg"
+							alt="image of fattys drivetrain">
+					</div>
+					<div class="col-12 col-sm-6 col-md-6 col-xl-3 colt" id="collect2">
+						<h4 id="collect2" class="sub">Collection</h4>
+						<p class="skinnytext">Our collection system, powered by a core hex Rev motor and a chain,
+							consisted of shafts with
+							rubber tubing to grab the freight and bring it into the robot and up a perspex ramp.
+						</p>
+					</div>
+					<div class="col-12 col-sm-6 col-md-6 col-xl-3 imags">
+						<img id="cooll1" class="buffimgs" src="images/Skinny_Intake.jpeg"
+							alt="image of fattys drivetrain">
+					</div>
+					<div class="col-12 col-sm-6 col-md-6 col-xl-3 colt" id="slide">
+						<h4 id="linear" class="sub">Linear Slide</h4>
+						<p class="bufftext">The linear slide was made using kitchen drawer slides. We threaded bearings
+							and pulleys with
+							jewellery wire wound onto a custom 3D printed spool with a motor programmed to pull it up to
+							the set heights we required.
+						</p>
+					</div>
+					<div class="col-12 col-sm-6 col-md-6 col-xl-3 imags">
+						<img id="slid" class="buffimgs" src="images/Linear_slide.jpg" alt="image of fattys drivetrain">
+					</div>
+					<div class="col-12 col-sm-6 col-md-6 col-xl-3 colt" id="carou">
+						<h4 id="caro" class="sub">Carousel</h4>
+						<p class="bufftext">We used a rubber wheel, powered by a core hex motor with a 2-1 gear ratio,
+							to turn the
+							carousel and deliver ducks. A suspension mechanism ensured that our wheel kept contact with
+							the edge of the carousel, adding some tolerance into the system to reduce the dependence on
+							accurate driving.
+						</p>
+					</div>
+					<div class="col-12 col-sm-6 col-md-6 col-xl-3 imags">
+						<img id="carsel" class="buffimgs" src="images/Skinny_carousel.jpeg"
+							alt="image of fattys drivetrain">
+					</div>
+					<div class="col-12 col-sm-6 col-md-6 col-xl-3 colt" id="Box">
+						<h4 id="box" class="sub">Servo Box</h4>
+						<p class="bufftext">The servo box was positioned on the linear slide to receive the freight from
+							our collection
+							system. Once the linear slide reached the desired height, the box could be tipped using a
+							servo motor to drop the freight off on the chosen level of the shipping hub.
+						</p>
+					</div>
+					<div class="col-12 col-sm-6 col-md-6 col-xl-3 imags">
+						<img id="box1" class="buffimgs" src="images/Box.jpeg" alt="image of fattys drivetrain">
+					</div>
+					<div class="col-12 col-sm-6 col-md-6 col-xl-3 colt" id="design2">
+						<h4 id="astitics2" class="sub">Design</h4>
+						<p>We used some cardboard and green spray paint to make our robot look more stylish and we
+							called the design “Lambogreeny”.
+						</p>
+					</div>
+					<div class="col-12 col-sm-6 col-md-6 col-xl-3 imags">
+						<img id="desi2" class="buffimgs" src="images/Skinny_design.jpeg"
+							alt="image of fattys drivetrain">
+					</div>
+				</div>
+
+				<H6 class="seasonHeading">Ultimate goal 2020-2021 season</H6>
+				<h3 id="heading">Our 2020-2021 Ultimate goal, award winning robot, was affectionately called "Fatty".
+					The descriptions of “Fatty’s” subsystems are below: </h3>
+
+				<div class="container-fluid">
+					<div class="row">
+						<div class="col-12 col-sm-6 col-md-6 col-xl-3 colt" id="drive">
+							<h4 id="drive" class="sub">Drivetrain</h4>
+							<p>Our drivetrain used mecanum wheels, mounted in-between two lengths of C-channel, powered
+								by three different types of Rev motors and connected and braced with extrusion.
+							</p>
+						</div>
+						<div class="col-12 col-sm-6 col-md-6 col-xl-3 imags">
+							<img id="dimg" class="buffimgs" src="images/WhatsApp Image 2022-09-05 at 11.31.43.jpeg"
+								alt="image of fattys drivetrain">
+						</div>
+						<div class="col-12 col-sm-6 col-md-6 col-xl-3 colt" id="collect">
+							<h4 id="collect" class="sub">Collection</h4>
+							<p class="bufftext">Our collection system consisted of two sets of rollers: one to lift the
+								rings off the
+								ground; and one to grab the rings and bring them into the robot. The sets of rollers
+								were powered by a single core hex Rev motor using a chain of gears.
+							</p>
+						</div>
+						<div class="col-12 col-sm-6 col-md-6 col-xl-3 imags">
+							<img id="colimg" class="buffimgs" src="images/Fatty_Collection.jpeg"
+								alt="image of fattys drivetrain">
+						</div>
+						<div class="col-12 col-sm-6 col-md-6 col-xl-3 colt" id="belt">
+							<h4 id="conveyer" class="sub">Conveyor belt</h4>
+							<p class="bufftext">We built a unique conveyer belt system to lift the rings up into our
+								hopper. We mounted
+								custom 3D printed spools onto top and bottom shafts. We ran rubber bands around the
+								spools, with custom 3D printed hooks attached to them. The hook would grab the ring and
+								flip it over into the hopper when it reached the top of the conveyer belt. The conveyer
+								belt was powered by the same motor as the collection system, using a chain of gears.</p>
+						</div>
+						<div class="col-12 col-sm-6 col-md-6 col-xl-3 imags">
+							<img id="belimg" class="buffimgs" src="images/Fatty_belt.jpeg"
+								alt="image of fattys drivetrain">
+						</div>
+						<div class="col-12 col-sm-6 col-md-6 col-xl-3 colt" id="shoot">
+							<h4 id="shoot" class="sub">Shooter</h4>
+							<p class="bufftext">Our shooter was of simple construction, designed to take up as little
+								space as possible.
+								It had a custom 3D printed hopper that could stack 3 rings at a time. We spun a rubber
+								flywheel up to a predetermined speed. Then an arm on a servo motor was activated to
+								force the lowest ring past the flywheel, propelling it in an accurate and consistent
+								trajectory towards the upper goal.
+							</p>
+						</div>
+						<div class="col-12 col-sm-6 col-md-6 col-xl-3 imags">
+							<img id="shoimg" class="buffimgs" src="images/Shooter.jpeg"
+								alt="image of fattys drivetrain">
+						</div>
+						<div class="col-12 col-sm-6 col-md-6 col-xl-3 colt" id="arm">
+							<h4 id="arm" class="sub">Wobble goal arm</h4>
+							<p class="bufftext">The wobble goal arm was an arm on a pivot in the vertical axis, powered
+								by a geared Rev
+								core hex motor. The griper used two extension of extrusion, each powered by a servo.
+								This acted as a simple clamp to grab the wobble goal.</p>
+						</div>
+						<div class="col-12 col-sm-6 col-md-6 col-xl-3 imags">
+							<img id="arimg" class="buffimgs" src="images/Wobble_goal.jpeg"
+								alt="image of fattys drivetrain">
+						</div>
+						<div class="col-12 col-sm-6 col-md-6 col-xl-3 colt" id="design">
+							<h4 id="astitics" class="sub">Design</h4>
+							<p>We enclosed our robot in black cardboard to display our team number and logo.</p>
+						</div>
+						<div class="col-12 col-sm-6 col-md-6 col-xl-3 imags">
+							<img id="deimg" class="buffimgs" src="images/Fatty_design.jpeg"
+								alt="image of fattys drivetrain">
+						</div>
+					</div>
+				</div>
+			</div>
+
+
+			<div class="row footer">
+
+				<div class="col-md-3 col-sm-12">
+					<p>Contact Us</p>
+					<a href="https://www.instagram.com/team_texpand?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw=="
+						target="_blank"><img class="ContactUs" src="images/instagram.jpeg"></a>
+					<p class="contacttext">#team_texpand</p>
+					<img class="ContactUs" src="images/Gmail.png">
+					<p class="contacttext">teamtexpand@gmail.com</p>
+
+				</div>
+
+				<div class="col-md-6 col-sm-12">
+
+					<img class="HomeTexpandlogo" src="images/txpand_logo-removebg-preview.png">
+
+					<div class="HomeTeXpand">
+						<p>Expanding STEM skills through robotics</p>
+					</div>
+
+				</div>
+
+				<div class="col-md-3 col-sm-12">
+				</div>
+
+			</div>
+		</div>
+	</div>
+
+	<script type="text/javascript">
+
+		$(document).ready(function () {
+			var fadeText = $('#firstAngle');
+
+			function fadeInOnScroll() {
+				var elementTop = fadeText.offset().top;
+				var elementBottom = elementTop + fadeText.outerHeight();
+				var viewportTop = $(window).scrollTop();
+				var viewportBottom = viewportTop + $(window).height();
+
+				// Check if the element is in the viewport
+				if (elementTop < viewportBottom && elementBottom > viewportTop) {
+					fadeText.addClass('show');
+				} else {
+					fadeText.removeClass('show');
+				}
+			}
+
+			// Initial check when the page loads
+			fadeInOnScroll();
+
+			// Listen for scroll events and trigger the function
+			$(window).scroll(fadeInOnScroll);
+		});
+
+		$(document).ready(function () {
+			var fadeText = $('#secondAngle');
+
+			function fadeInOnScroll() {
+				var elementTop = fadeText.offset().top;
+				var elementBottom = elementTop + fadeText.outerHeight();
+				var viewportTop = $(window).scrollTop();
+				var viewportBottom = viewportTop + $(window).height();
+
+				// Check if the element is in the viewport
+				if (elementTop < viewportBottom && elementBottom > viewportTop) {
+					fadeText.addClass('show');
+				} else {
+					fadeText.removeClass('show');
+				}
+			}
+
+			// Initial check when the page loads
+			fadeInOnScroll();
+
+			// Listen for scroll events and trigger the function
+			$(window).scroll(fadeInOnScroll);
+		});
+
+		$(document).ready(function () {
+			var fadeText = $('#forthAngle');
+
+			function fadeInOnScroll() {
+				var elementTop = fadeText.offset().top;
+				var elementBottom = elementTop + fadeText.outerHeight();
+				var viewportTop = $(window).scrollTop();
+				var viewportBottom = viewportTop + $(window).height();
+
+				// Check if the element is in the viewport
+				if (elementTop < viewportBottom && elementBottom > viewportTop) {
+					fadeText.addClass('show');
+				} else {
+					fadeText.removeClass('show');
+				}
+			}
+
+			// Initial check when the page loads
+			fadeInOnScroll();
+
+			// Listen for scroll events and trigger the function
+			$(window).scroll(fadeInOnScroll);
+		});
+
+		$(document).ready(function () {
+			var fadeText = $('#thirdAngle');
+
+			function fadeInOnScroll() {
+				var elementTop = fadeText.offset().top;
+				var elementBottom = elementTop + fadeText.outerHeight();
+				var viewportTop = $(window).scrollTop();
+				var viewportBottom = viewportTop + $(window).height();
+
+				// Check if the element is in the viewport
+				if (elementTop < viewportBottom && elementBottom > viewportTop) {
+					fadeText.addClass('show');
+				} else {
+					fadeText.removeClass('show');
+				}
+			}
+
+			// Initial check when the page loads
+			fadeInOnScroll();
+
+			// Listen for scroll events and trigger the function
+			$(window).scroll(fadeInOnScroll);
+		});
+
+		$("#Home").css({ "display": "block" });
+		$("#Don").css({ "display": "none" });
+		$("#Sponsor").css({ "display": "none" });
+		$("#Outreach").css({ "display": "none" });
+		$("#PBots").css({ "display": "none" });
+		$("#aboutUs").css({ "display": "none" });
+
+		$("#homeTab").click(function () {
+
+			$("#aboutUs").css({ "display": "none" });
+			$("#PBots").css({ "display": "none" });
+			$("#Outreach").css({ "display": "none" });
+			$("#Don").css({ "display": "none" });
+			$("#Sponsor").css({ "display": "none" });
+			$("#Home").css({ "display": "block" });
+			$("#Test").toggleClass("test2");
+
+		});
+
+		$("#sponsorshipsTab").click(function () {
+
+			$("#aboutUs").css({ "display": "none" });
+			$("#PBots").css({ "display": "none" });
+			$("#Outreach").css({ "display": "none" });
+			$("#Don").css({ "display": "none" });
+			$("#Home").css({ "display": "none" });
+			$("#Sponsor").css({ "display": "block" });
+			$("#Test").toggleClass("test2");
+
+		});
+
+		$("#donationsTab").click(function () {
+
+			$("aboutUs").css({ "display": "none" });
+			$("#PBots").css({ "display": "none" });
+			$("#Outreach").css({ "display": "none" });
+			$("#Sponsor").css({ "display": "none" });
+			$("#Home").css({ "display": "none" });
+			$("#Don").css({ "display": "block" });
+			$("#Test").toggleClass("test2");
+
+		});
+
+		$("#outreachTab").click(function () {
+
+			$("#aboutUs").css({ "display": "none" });
+			$("#PBots").css({ "display": "none" });
+			$("#Sponsor").css({ "display": "none" });
+			$("#Home").css({ "display": "none" });
+			$("#Don").css({ "display": "none" });
+			$("#Outreach").css({ "display": "block" });
+			$("#Test").toggleClass("test2");
+
+		});
+
+		$("#pastRobotsTab").click(function () {
+
+			$("#aboutUs").css({ "display": "none" });
+			$("#Sponsor").css({ "display": "none" });
+			$("#Home").css({ "display": "none" });
+			$("#Don").css({ "display": "none" });
+			$("#Outreach").css({ "display": "none" });
+			$("#PBots").css({ "display": "block" });
+			$("#Test").toggleClass("test2");
+
+		});
+
+		$("#aboutUsTab").click(function () {
+
+			$("#PBots").css({ "display": "none" });
+			$("#Sponsor").css({ "display": "none" });
+			$("#Home").css({ "display": "none" });
+			$("#Don").css({ "display": "none" });
+			$("#Outreach").css({ "display": "none" });
+			$("#aboutUs").css({ "display": "block" });
+			$("#Test").toggleClass("test2");
+
+		});
+
+		$("#button").click(function () {
+
+			$("#Test").toggleClass("test2");
+
+		});
+
+	</script>
+
+	<!-- <script type = "text/javascript">
+
+		const inputBox = <document class="onclick"></document>
+
+		inputBox.addEventListener("keyup"){
+			let result = [];
+		}
+
+		
+
+	</script> -->
+
+</body>
+
+</HTML>
