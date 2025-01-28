@@ -1813,48 +1813,93 @@
 		#InfoSession {
 			background-color: #333;
 			border-style: solid;
-			border-radius: 3% / 20%;
+			border-radius: 3% / 25%;
 			border-color: rgb(90, 88, 88);
 		}
 
 		#infotext {
 			font-family: Arial, Helvetica, sans-serif;
 			font-weight: 600;
-			font-size: 2vw;
+			font-size: 2.2vw;
 			padding-left: 2vw;
 			padding-top: 0.6vw;
 			padding-bottom: 0.6vw;
 			margin: 0;
 		}
 
+		#helpdefend {
+			font-family: Arial, Helvetica, sans-serif;
+			font-weight: 500;
+			font-size: 2vw;
+			padding-left: 4.4vw;
+			padding-top: 0.6vw;
+			padding-bottom: 0.6vw;
+			margin: 0;
+		}
+
 		.buttonStyles {
-			background-color: #04AA6D;
+			background-color: #2f344b;
 			border: none;
 			color: white;
-			height: 9vw;
-			padding: 2vw 2vw;
+			height: 4vw;
+			padding-left: 5vw;
+			padding-right: 5vw;
 			text-align: center;
 			font-family: Arial, Helvetica, sans-serif;
-			font-size: 1.8vw;
+			font-size: 2.2vw;
 			text-decoration: none;
 			display: inline-block;
 			border-radius: 1vw;
 			margin-left: 2vw;
 		}
 
+		.buttonStyles2 {
+			background-color: #2f344b;
+			border: none;
+			color: white;
+			height: 4vw;
+			padding-left: 5vw;
+			padding-right: 5vw;
+			text-align: center;
+			font-family: Arial, Helvetica, sans-serif;
+			font-size: 2.2vw;
+			text-decoration: none;
+			display: inline-block;
+			border-radius: 1vw;
+			margin-left: 2vw;
+
+		}
+
 		@media(min-width: 900px) {
 			.buttonStyles {
-				background-color: #04AA6D;
+				background-color: #2f344b;
 				border: none;
 				color: white;
-				padding: 2vw 2vw;
+				padding-left: 5vw;
+				padding-right: 5vw;
 				text-align: center;
 				font-family: Arial, Helvetica, sans-serif;
-				font-size: 1.8vw;
+				font-size: 2.2vw;
+				text-decoration: none;
+				display: inline-block;
+				border-radius: 1vw;
+				margin-left: 4vw;
+			}
+
+			.buttonStyles2 {
+				background-color: #2f344b;
+				border: none;
+				color: white;
+				padding-left: 5vw;
+				padding-right: 5vw;
+				text-align: center;
+				font-family: Arial, Helvetica, sans-serif;
+				font-size: 2.2vw;
 				text-decoration: none;
 				display: inline-block;
 				border-radius: 1vw;
 				margin-left: 2vw;
+
 			}
 		}
 
@@ -1966,21 +2011,33 @@
 			<p id="num" class="textShadow"> Texpand</p>
 		</div>
 
+		<div class="row">
+
+			<div class="container"  id="InfoSession"  style="height: 15vw; display: inline-flex; padding-top: 0.8vw; margin-top: 1rem;">
+				<div class="col-12 col-sm-12 col-md-8 col-xl-8">
+					<h1 id="infotext">2024 CENTERSTAGE FTC Robotics World Champions</h1>
+					<h1 id="helpdefend">Help us defend our title in 2025</h1>
+					<button class="buttonStyles2" id="homelinktospon">Sponsorship infomation</button>
+				</div>
+				<div class="col-12 col-sm-12 col-md-4 col-xl-4">
+					<img style="width: 80%; height: auto;" src="images/AllteamsPic.JPG" alt="image of fattys drivetrain">
+				</div>
+			</div>
+
+		</div>
+
 		<div class="row" style="padding-bottom: 0; padding-top: 1vw;">
 			<div id="InfoSession" class="col-12 col-sm-12 col-md-12 col-xl-12"
-				style="height: 15vw; display: inline-flex; padding-top: 0.8vw;">
-				<img src="images/Ignite-logo-only.png" alt="" style="height: 13vw;">
+				style="height: 11vw; display: inline-flex; padding-top: 0.8vw;">
+				<img src="images/Ignite-logo-only.png" alt="" style="height: 8vw;">
 				<div>
 					<h1 id="infotext">For more info on the Ignite Robotics International initiative visit the links
 						below</h1>
 					<div style="display: inline-flex; padding-left: 2vw;">
-						<p style="width: 50%; font-size: 1.5vw;">This initiative is to expose more young South Africans
+						<p style="width: 65%; font-size: 1.65vw;">This initiative is to expose more young South Africans
 							to
 							FTC and the
 							world of robotics as an amazing way to have fun and learn valuable STEM skills</p>
-						<!-- <button class="buttonStyles"
-							onclick="window.open('https://www.igniteroboticsinternational.org/events', '_blank')">Info
-							Session Sign up</button> -->
 						<button class="buttonStyles"
 							onclick="window.open('https://youtu.be/V2cJhmhxSt0?si=4flilZv7JUnMqMHx', '_blank')">Intro
 							Video</button>
@@ -3219,6 +3276,18 @@
 		});
 
 		$("#sponsorshipsTab").click(function () {
+
+			$("#aboutUs").css({ "display": "none" });
+			$("#PBots").css({ "display": "none" });
+			$("#Outreach").css({ "display": "none" });
+			$("#Don").css({ "display": "none" });
+			$("#Home").css({ "display": "none" });
+			$("#Sponsor").css({ "display": "block" });
+			$("#Test").toggleClass("test2");
+
+		});
+
+		$("#homelinktospon").click(function () {
 
 			$("#aboutUs").css({ "display": "none" });
 			$("#PBots").css({ "display": "none" });
