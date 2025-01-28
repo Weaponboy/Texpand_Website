@@ -446,7 +446,7 @@
 		}
 
 		#homejumbo {
-			background-image: url(images/Team\ pic.jpg);
+			background-image: url(images/Team\ photo\ INTO\ reg.JPG);
 			background-position-x: center;
 			background-position-y: center;
 			background-size: cover;
@@ -460,13 +460,13 @@
 
 		@media (max-width: 600px) {
 			#homejumbo {
-				background-image: url(images/Team\ pic.jpg);
+				background-image: url(images/Team\ photo\ INTO\ reg.JPG);
 				background-position-x: center;
 				background-position-y: center;
 				background-size: cover;
 				font-family: "Helvetica ", sans-serif;
 				text-align: center;
-				padding-top: 3rem;
+				padding-top: 4rem;
 				padding-bottom: 0rem;
 				margin: 0;
 				color: rgb(0, 0, 0);
@@ -479,10 +479,10 @@
 
 		@media (min-width: 1400px) {
 
-			#homejumbo {
+			/* #homejumbo {
 				margin-left: 15%;
 				margin-right: 15%;
-			}
+			} */
 
 			#sponjumbo {
 				margin-left: 15%;
@@ -505,10 +505,10 @@
 
 		@media (min-width: 1500px) {
 
-			#homejumbo {
+			/* #homejumbo {
 				margin-left: 20%;
 				margin-right: 20%;
-			}
+			} */
 
 			#sponjumbo {
 				margin-left: 20%;
@@ -855,8 +855,23 @@
 			width: 100%;
 		}
 
+		.sponsorsRow {
+			display: flex; /* Enables Flexbox */
+			justify-content: center; /* Centers items horizontally */
+			align-items: center; /* Centers items vertically within the row */
+			flex-wrap: wrap; /* Ensures elements wrap to the next row if needed */
+		}
+
 		.imags4 {
-			text-align: center;
+			display: flex; /* Makes each image container a flex container */
+			justify-content: center; /* Centers the image horizontally within its container */
+			align-items: center; /* Centers the image vertically within its container */
+			text-align: center; /* Ensures images are visually centered */
+		}
+
+		.sponsors3 {
+			max-width: 100%; /* Ensures the image scales properly */
+			height: auto; /* Maintains the aspect ratio */
 		}
 
 		.padd {
@@ -1015,8 +1030,10 @@
 			border: rgb(36, 36, 58);
 			border-style: solid;
 			margin: 0.2rem;
+			margin-bottom: 3rem;
 			border-width: 0.4rem;
 			border-radius: 2rem;
+			padding-top: 1rem;
 		}
 
 		.margin11 {
@@ -1026,6 +1043,11 @@
 			border-width: 0.4rem;
 			border-radius: 2rem;
 			margin-bottom: 2rem;
+		}
+
+		#backDetails{
+			margin-left: auto;
+			margin-right: auto;
 		}
 
 		#paddingb {
@@ -1207,10 +1229,6 @@
 		.contacttext2 {
 			float: right;
 			user-select: text;
-		}
-
-		#paddingfooter {
-			padding-bottom: 4rem;
 		}
 
 		#sponsorhshipre {
@@ -1839,6 +1857,59 @@
 				margin-left: 2vw;
 			}
 		}
+
+		#defendHeading{
+			font-size: 240%;
+			font-weight: 700;
+			text-align: center;
+			font-family: Arial, Helvetica, sans-serif;		
+		}
+
+		.defendSubHeadings{
+			font-family: Arial, Helvetica, sans-serif;
+			font-size: 160%;
+			margin: 0;
+			text-align: center;
+			padding: 0;
+			color: black;
+			font-weight: 700;
+		}
+
+		#bankDetails{
+			margin: 2rem;
+		}
+
+		#defHeadingPadding{
+			display: flex; /* Makes each image container a flex container */
+			justify-content: center; /* Centers the image horizontally within its container */
+			align-items: center; /* Centers the image vertically within its container */
+			text-align: center;
+		}
+
+		#rowToAlign{
+			display: flex; /* Enables Flexbox */
+			justify-content: center; /* Centers items horizontally */
+			align-items: center; /* Centers items vertically within the row */
+			flex-wrap: wrap;
+		}
+
+		#rowspacing{
+			padding-top: 2rem;
+		}
+
+		#bankDetails{
+			width: 94%;
+		}
+
+		#otherOptions{
+			text-align: left;
+			padding-top: 5rem;
+			padding-left: 4rem;
+			padding-right: 4rem;
+			font-family: Arial, Helvetica, sans-serif;
+			font-size: 120%;
+		}
+
 	</style>
 
 </head>
@@ -1878,7 +1949,7 @@
 			</div>
 
 			<div class="topbar-section" id="sponsorshipsTab">
-				<span class="tabs">Partnerships</span>
+				<span class="tabs">Sponsorships</span>
 			</div>
 
 			<div class="topbar-section" id="donationsTab" style="display:none;">
@@ -1907,9 +1978,9 @@
 							to
 							FTC and the
 							world of robotics as an amazing way to have fun and learn valuable STEM skills</p>
-						<button class="buttonStyles"
+						<!-- <button class="buttonStyles"
 							onclick="window.open('https://www.igniteroboticsinternational.org/events', '_blank')">Info
-							Session Sign up</button>
+							Session Sign up</button> -->
 						<button class="buttonStyles"
 							onclick="window.open('https://youtu.be/V2cJhmhxSt0?si=4flilZv7JUnMqMHx', '_blank')">Intro
 							Video</button>
@@ -1938,7 +2009,7 @@
 							<img class="card_imgs" src="images/awards.png" class="card-img-top" alt="...">
 							<div class="card-body">
 								<h5 class="card-title">AWARDS WON</h5>
-								<p class="card-text">16</p>
+								<p class="card-text">18</p>
 							</div>
 						</div>
 					</div>
@@ -1948,7 +2019,7 @@
 							<img class="card_imgs" src="images/members.png" class="card-img-top" alt="...">
 							<div class="card-body">
 								<h5 class="card-title" id="smaller">TEAM MEMBERS</h5>
-								<p class="card-text">13</p>
+								<p class="card-text">10</p>
 							</div>
 						</div>
 					</div>
@@ -1958,7 +2029,7 @@
 							<img class="card_imgs" src="images/calender.png" class="card-img-top" alt="...">
 							<div class="card-body">
 								<h5 class="card-title">YEARS IN FIRST</h5>
-								<p class="card-text">4</p>
+								<p class="card-text">5</p>
 							</div>
 						</div>
 					</div>
@@ -2011,7 +2082,7 @@
 		<div class="jumbotron" id="Donjumbo">
 			<h2 id="hea" class="s">Donations</h2>
 		</div>
-		<p id="don3">One of the main dissadvantages our team has is that we have to compete with teams from America that
+		<p id="don3">One of the main disadvantages our team has is that we have to compete with teams from America that
 			have
 			budgets of over R200,000 or
 			roughly $11,400.
@@ -2024,91 +2095,65 @@
 	<div id="Sponsor" class="tabcontent">
 
 		<div class="jumbotron" id="sponjumbo">
-			<h2 id="hea" class="textShadow">Partnerships</h2>
+			<h2 id="hea" class="textShadow">Sponsorships</h2>
 		</div>
 
 
 		<div class="container-fluid" id="sponcon">
 
-			<!-- <div class="row">
-				<div class="col-12 col-sm-12 col-md-6 col-xl-6" id="heightChange">
-					<a href="https://gofund.me/c1dc51d5" target="_blank"><img id="gofundimg"
-							src="images/goFundMe logo.png" alt="">
-					</a>
-					<p class="campText">goFundMe campaign</p>
-				</div>
-				<div class="col-12 col-sm-12 col-md-6 col-xl-6" id="heightChange">
-					<a href="https://www.backabuddy.co.za/champion/project/texpand-ftc-5826906396642016318/"
-						target="_blank"><img id="backimg" src="images/BackaBuddy logo.png" alt=""></a>
-					<p class="campText">Back-a-buddy campaign</p>
-				</div>
-			</div> -->
-			<!-- 
-			<div class="row RowVid2" id="morepadding">
-				<div class="col-12 col-sm-12 col-md-12 col-xl-12 imags34">
-					<div class="container-fluid">
-						<p id="textlead24">
-							Our current sponsors that have helped us get this far include
-						</p>
+			<div class="row" id="rowToAlign">
+				
+				<div class="col-12 col-sm-12 col-md-6 col-xl-6" id="defHeadingPadding">
+					<div>
+						<H1 id="defendHeading">Help us defend our</H1>
+						<H1 id="defendHeading">World Champions title in 2025</H1>
 					</div>
+				</div>
+
+				<div class="col-12 col-sm-12 col-md-6 col-xl-6">
+					<Iframe id="videobuff" width="700vw" height="395vw"
+						src="https://www.youtube.com/embed/wB_Y1fu9KU0?si=8InKV4-SqSJ-njrL"></Iframe>
 				</div>
 			</div>
 
-			<div class="row Rowtest">
 
-				<div class="col-12 col-sm-12 col-md-4 col-xl-4 imags3 height">
-					<div class="container-fluid margin1 height2">
-						<p id="textspon">Lead sponsor</p>
-					</div>
+			<div class="row" id="rowspacing">
+				<div class="col-12 col-sm-12 col-md-6 col-xl-6">
+					<p class="defendSubHeadings">Banking Details</p>
+					<img id="bankDetails" src="images/Bank details.jpg" alt="">				
 				</div>
 
-				<div class="col-12 col-sm-12 col-md-4 col-xl-4 imags3 height">
-					<div class="container-fluid margin1 height2" id="paddingb">
-						<p id="textspon">Gold sponsors</p>
-					</div>
+				<div class="col-12 col-sm-12 col-md-6 col-xl-6">
+					<p class="defendSubHeadings">Other payment methods</p>
+					<p id="otherOptions">Contact us at teamtexpand@gmail.com to learn how your company can qualify for a Section 18A tax certificate (for South African companies) or a 501(c) certificate (for international companies).</p>
+				</div>
+			</div>
+
+			<div class="row RowVid2 margin1 sponsorsRow" id="paddingfooter">
+
+				<div class="col-6 col-sm-6 col-md-3 col-xl-3 imags4">
+					<img class="sponsors3" src="images/hg-molenaar-logo (1).png">
 				</div>
 
-				<div class="col-12 col-sm-12 col-md-4 col-xl-4 imags3 height">
-					<div class="container-fluid margin1 height2" id="paddingb">
-						<p id="textspon">Silver sponsors</p>
-						<img id="FSILogo" src="images/FSI logo.jpg" alt="">
-					</div>
+				<div class="col-6 col-sm-6 col-md-3 col-xl-3 imags4">
+					<img class="sponsors3" src="images/Robot handling.png">
 				</div>
 
-			</div> -->
-
-
-			<div class="row RowVid2" id="paddingfooter">
-
-				<div class="container-fluid margin1 height2">
-					<div class="row" id="paddingPart">
-
-						<div class="col-6 col-sm-6 col-md-3 col-xl-2 imags4">
-							<img class="sponsors3" src="images/hg-molenaar-logo (1).png">
-						</div>
-
-						<div class="col-6 col-sm-6 col-md-3 col-xl-2 imags4">
-							<img class="sponsors5" src="images/Robot handling.png">
-						</div>
-
-						<div class="col-6 col-sm-6 col-md-3 col-xl-2 imags4">
-							<img class="sponsors6" src="images/WhatsApp Image 2023-01-30 at 09.08.46.jpeg">
-						</div>
-
-						<div class="col-6 col-sm-6 col-md-3 col-xl-2 imags4">
-							<img class="sponsors7" src="images/Slide2 (1).JPG">
-						</div>
-
-						<div class="col-6 col-sm-6 col-md-3 col-xl-2 imags4">
-							<img class="sponsors8" src="images/Personal Actuary Logo.jpg">
-						</div>
-
-						<div class="col-6 col-sm-6 col-md-3 col-xl-2 imags4">
-							<img class="sponsors7" src="images/rockwell logo.png">
-						</div>
-
-					</div>
+				<div class="col-6 col-sm-6 col-md-3 col-xl-3 imags4">
+					<img class="sponsors3" src="images/WhatsApp Image 2023-01-30 at 09.08.46.jpeg">
 				</div>
+				<div class="col-6 col-sm-6 col-md-3 col-xl-3 imags4">
+					<img class="sponsors3" src="images/Slide2 (1).JPG">
+				</div>
+
+				<div class="col-6 col-sm-6 col-md-3 col-xl-3 imags4">
+					<img class="sponsors3" src="images/Personal Actuary Logo.jpg">
+				</div>
+
+				<div class="col-6 col-sm-6 col-md-3 col-xl-3 imags4">
+					<img class="sponsors3" src="images/rockwell logo.png">
+				</div>
+
 			</div>
 
 			<!-- <div class="row">
